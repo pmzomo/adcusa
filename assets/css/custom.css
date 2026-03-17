@@ -609,9 +609,12 @@ footer {
   /* Force composited layer — keeps transform isolated */
   will-change: transform, opacity;
 }
-/* All sections that may contain horizontal AOS animations */
+/* All sections that may contain horizontal AOS animations.
+   position:relative is required — overflow:hidden only clips transformed
+   children reliably when the container is a positioned element. */
 section {
-  overflow-x: hidden;
+  overflow-x: hidden !important;
+  position: relative;
 }
 
 /* ── Ticker ────────────────────────────────── */
