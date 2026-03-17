@@ -660,9 +660,127 @@ blockquote.big-quote {
   border: 3px solid var(--secondary);
 }
 
+/* ── Hamburger icon color ───────────────────── */
+#menu-btn {
+  color: var(--primary);
+}
+#navbar.nav-transparent #menu-btn {
+  color: #fff;
+}
+#navbar.nav-solid #menu-btn {
+  color: var(--primary);
+}
+
 /* ── Responsive ────────────────────────────── */
 @media (max-width: 768px) {
-  .page-hero { height: 280px; }
+  /* Page heroes */
+  .page-hero { height: 260px; }
+
+  /* Section padding */
+  .section-pad { padding: 3rem 0; }
+  .section-pad-sm { padding: 2rem 0; }
+
+  /* Nav logo — shrink on mobile */
+  #navbar img[alt="ADCUSA Logo"] {
+    height: 3.5rem !important;
+  }
+
+  /* Hero badge — allow wrapping, shrink text */
+  .hero-badge-text {
+    font-size: 0.65rem !important;
+    letter-spacing: 0.08em !important;
+    white-space: normal;
+    text-align: center;
+    line-height: 1.6;
+  }
+  .hero-badge-wrap {
+    white-space: normal;
+    text-align: center;
+    padding: 0.5rem 1rem !important;
+  }
+
+  /* Hero content */
+  .hero-content {
+    padding: 1.5rem 1rem !important;
+  }
+
+  /* Hero buttons — stack on mobile */
+  .hero-content .flex.flex-wrap {
+    flex-direction: column;
+    align-items: center;
+  }
+  .hero-content .flex.flex-wrap a {
+    width: 100%;
+    max-width: 280px;
+    text-align: center;
+  }
+
+  /* Stats grid — 2 columns on mobile */
+  .stats-grid-mobile {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 1.5rem !important;
+  }
+
+  /* Program cards — single column */
+  .program-cards-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* Involve cards */
+  .involve-card-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* About preview image height */
+  .about-preview-img {
+    height: 280px !important;
+  }
+
+  /* Section titles */
+  .section-title {
+    font-size: clamp(1.5rem, 6vw, 2rem);
+  }
+
+  /* Footer logo — shrink on mobile */
+  footer img[alt="ADCUSA"] {
+    height: 100px !important;
+  }
+
+  /* Quote band */
+  .quote-band {
+    padding: 2rem 1.25rem !important;
+  }
+  blockquote.big-quote {
+    font-size: clamp(1rem, 4vw, 1.4rem);
+  }
+
+  /* Footer grid — stack columns */
+  .footer-grid {
+    grid-template-columns: 1fr !important;
+    gap: 2rem !important;
+  }
+
+  /* Ticker font */
+  .ticker-inner span {
+    font-size: 0.72rem !important;
+  }
+
+  /* News cards */
+  .news-cards-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* Pillar cards */
+  .pillar-cards-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* CTA band buttons — stack */
+  .cta-band-buttons {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 0.75rem !important;
+  }
 }
 
 /* ── Utility ───────────────────────────────── */
