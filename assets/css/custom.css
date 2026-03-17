@@ -680,11 +680,6 @@ blockquote.big-quote {
   .section-pad { padding: 3rem 0; }
   .section-pad-sm { padding: 2rem 0; }
 
-  /* Nav logo — shrink on mobile */
-  #navbar img[alt="ADCUSA Logo"] {
-    height: 3.5rem !important;
-  }
-
   /* Hero badge — allow wrapping, shrink text */
   .hero-badge-text {
     font-size: 0.65rem !important;
