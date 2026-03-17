@@ -599,11 +599,29 @@ footer {
   height: 8px;
 }
 
+/* ── Prevent AOS horizontal animations from causing page-level scroll ── */
+/* fade-left / fade-right start elements outside the viewport via translateX.
+   Without overflow:hidden on a containing block, mobile browsers expand the
+   scroll area before the element animates in — pushing the fixed nav right
+   and hiding the hamburger icon. */
+[data-aos="fade-left"],
+[data-aos="fade-right"] {
+  /* Force composited layer — keeps transform isolated */
+  will-change: transform, opacity;
+}
+/* All sections that may contain horizontal AOS animations */
+section {
+  overflow-x: hidden;
+}
+
 /* ── Ticker ────────────────────────────────── */
 .ticker-band {
   background: var(--secondary);
   overflow: hidden;
   white-space: nowrap;
+  position: relative;       /* overflow:hidden more reliable on positioned elements */
+  width: 100%;
+  max-width: 100%;
 }
 .ticker-inner {
   display: inline-flex;
