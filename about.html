@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About ADCUSA — African Diaspora Coalition of USA</title>
+  <meta name="description" content="Learn about the African Diaspora Coalition of USA — our history, mission, vision, values, and the leadership team driving change since 2015." />
+  <link rel="icon" type="image/png" href="../adcusalogo.png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#1B4332', 'primary-dark': '#0F2419', 'primary-light': '#2D6A4F',
+            secondary: '#C8952A', 'secondary-light': '#E8B84B', cream: '#FEF9EF',
+          },
+          fontFamily: { heading: ['Montserrat', 'sans-serif'], body: ['Inter', 'sans-serif'] }
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="assets/css/custom.css" />
+</head>
+
+<body>
+
+  <!-- ── NAVIGATION ───────────────────────────── -->
+  <nav id="navbar" class="fixed top-0 left-0 right-0 z-50">
+    <div class="container-custom">
+      <div class="flex items-center justify-between py-3">
+        <a href="index.html" class="flex items-center gap-3 no-underline">
+          <img src="../adcusalogo.png" alt="ADCUSA Logo" class="drop-shadow-lg" style="height:5.95rem; width:auto;" />
+          <div class="org-name hidden md:block">
+            <div style="font-family:'Montserrat',sans-serif; font-weight:800; font-size:1.1rem; line-height:1.1; letter-spacing:0.04em; color:var(--primary);">ADCUSA</div>
+            <div style="font-family:'Inter',sans-serif; font-weight:400; font-size:0.72rem; letter-spacing:0.07em; opacity:0.75; color:var(--primary);">African Diaspora Coalition of USA</div>
+          </div>
+        </a>
+        <div class="hidden md:flex items-center gap-8">
+          <a href="index.html" class="nav-link">Home</a>
+          <a href="about.html" class="nav-link active">About</a>
+          <a href="programs.html" class="nav-link">Programs</a>
+          <a href="get-involved.html" class="nav-link">Get Involved</a>
+          <a href="contact.html" class="nav-link">Contact</a>
+          <a href="get-involved.html#donate" class="btn-secondary" style="padding:0.55rem 1.4rem; font-size:0.82rem;"><i class="fas fa-heart mr-1"></i> Donate</a>
+        </div>
+        <button id="menu-btn" class="md:hidden p-2 rounded focus:outline-none" aria-label="Menu">
+          <svg id="icon-open" class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/></svg>
+          <svg id="icon-close" class="w-7 h-7 hidden" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>
+        </button>
+      </div>
+      <div id="mobile-menu" class="hidden md:hidden pb-4">
+        <div class="flex flex-col gap-1 bg-primary rounded-lg p-4 mt-1">
+          <a href="index.html" class="text-white font-semibold py-2 px-3 rounded hover:bg-white/10 transition">Home</a>
+          <a href="about.html" class="text-white font-semibold py-2 px-3 rounded hover:bg-white/10 transition">About</a>
+          <a href="programs.html" class="text-white font-semibold py-2 px-3 rounded hover:bg-white/10 transition">Programs</a>
+          <a href="get-involved.html" class="text-white font-semibold py-2 px-3 rounded hover:bg-white/10 transition">Get Involved</a>
+          <a href="contact.html" class="text-white font-semibold py-2 px-3 rounded hover:bg-white/10 transition">Contact</a>
+          <a href="get-involved.html#donate" class="btn-secondary mt-2 text-center" style="padding:0.65rem;"><i class="fas fa-heart mr-1"></i> Donate Now</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ── PAGE HERO ─────────────────────────────── -->
+  <section class="page-hero" style="margin-top:0; padding-top:72px;">
+    <div class="page-hero-bg" style="background-image:url('../adimage/2151435662.jpg');"></div>
+    <div class="page-hero-overlay"></div>
+    <div class="container-custom page-hero-content w-full">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="index.html"><i class="fas fa-home mr-1"></i>Home</a>
+        <span>/</span><span style="color:#fff;">About Us</span>
+      </nav>
+      <h1 style="font-family:'Montserrat',sans-serif; font-size:clamp(2rem,5vw,3.5rem); font-weight:900; color:#fff; line-height:1.1;">About <span style="color:var(--secondary);">ADCUSA</span></h1>
+      <p style="color:rgba(255,255,255,0.80); font-size:1.05rem; margin-top:0.75rem; max-width:600px; line-height:1.75;">Our history, mission, values, and the people driving change across the African diaspora.</p>
+    </div>
+  </section>
+
+  <!-- ── OUR STORY ─────────────────────────────── -->
+  <section class="section-pad" style="background:#fff;">
+    <div class="container-custom">
+      <div class="grid md:grid-cols-2 gap-16 items-center">
+        <div data-aos="fade-right">
+          <span class="section-label">Our Story</span>
+          <h2 class="section-title">Born from Vision.<br/>Built on Unity.</h2>
+          <div class="section-divider"></div>
+          <p style="color:var(--gray); line-height:1.9; margin-bottom:1.2rem;">
+            The <strong style="color:var(--primary);">African Diaspora Coalition of USA (ADCUSA)</strong> was founded in <strong>2015</strong> in Durham, North Carolina — a city rich in African-American heritage and diversity. The organization emerged from a clear-eyed recognition: the African diaspora in the United States possessed enormous untapped potential — professional expertise, entrepreneurial spirit, cultural wealth — that, if channeled strategically, could transform lives both in America and across Africa.
+          </p>
+          <p style="color:var(--gray); line-height:1.9; margin-bottom:1.2rem;">
+            Co-Founder and Executive Director <strong style="color:var(--primary);">Dr. Philip Mwalali MD</strong> and his founding team created ADCUSA to bridge that gap — to create platforms, forums, and cultural spaces where diaspora professionals could connect, invest, and build lasting change.
+          </p>
+          <p style="color:var(--gray); line-height:1.9;">
+            Recognized as a <strong style="color:var(--primary);">501(c)(3) public charity</strong> (EIN: 46-4204919) under the NTEE code for Cultural &amp; Ethnic Awareness, ADCUSA operates as a fully volunteer-driven organization — every dollar contributed goes directly into programs that serve the community.
+          </p>
+        </div>
+
+        <div data-aos="fade-left">
+          <!-- Timeline -->
+          <div style="background:var(--cream); border-radius:12px; padding:2.5rem;">
+            <h3 style="font-family:'Montserrat',sans-serif; font-weight:800; font-size:1.25rem; color:var(--primary); margin-bottom:2rem;">
+              <i class="fas fa-history mr-2" style="color:var(--secondary);"></i>Our Journey
+            </h3>
+            <div class="timeline-item mb-8">
+              <div class="timeline-dot">15</div>
+              <div>
+                <h4 style="font-family:'Montserrat',sans-serif; font-weight:800; color:var(--primary); font-size:0.95rem;">2015 — Founded</h4>
+                <p style="color:var(--gray); font-size:0.88rem; margin-top:0.3rem; line-height:1.7;">ADCUSA established in Durham, NC by Dr. Philip Mwalali and co-founders. 501(c)(3) status secured.</p>
+              </div>
+            </div>
+            <div class="timeline-item mb-8">
+              <div class="timeline-dot" style="font-size:0.6rem;">17</div>
+              <div>
+                <h4 style="font-family:'Montserrat',sans-serif; font-weight:800; color:var(--primary); font-size:0.95rem;">2017 — First Forums</h4>
+                <p style="color:var(--gray); font-size:0.88rem; margin-top:0.3rem; line-height:1.7;">Inaugural professional networking and entrepreneur forums hosted across the Research Triangle region.</p>
+              </div>
+            </div>
+            <div class="timeline-item mb-8">
+              <div class="timeline-dot" style="font-size:0.6rem;">20</div>
+              <div>
+                <h4 style="font-family:'Montserrat',sans-serif; font-weight:800; color:var(--primary); font-size:0.95rem;">2020 — Expansion</h4>
+                <p style="color:var(--gray); font-size:0.88rem; margin-top:0.3rem; line-height:1.7;">Programs expanded to multiple U.S. states. Virtual forums launched to connect diaspora members nationally.</p>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-dot" style="font-size:0.6rem;">Now</div>
+              <div>
+                <h4 style="font-family:'Montserrat',sans-serif; font-weight:800; color:var(--primary); font-size:0.95rem;">Today — Growing Impact</h4>
+                <p style="color:var(--gray); font-size:0.88rem; margin-top:0.3rem; line-height:1.7;">Active in 5+ states, ADCUSA continues to build a stronger, more unified African diaspora community in America.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── MISSION VISION VALUES ─────────────────── -->
+  <section class="section-pad" style="background:var(--cream);">
+    <div class="container-custom">
+      <div class="text-center mb-14" data-aos="fade-up">
+        <span class="section-label">Our Foundation</span>
+        <h2 class="section-title">Mission, Vision &amp; Values</h2>
+        <div class="section-divider center"></div>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-8 mb-16">
+        <div class="pillar-card" data-aos="fade-up" data-aos-delay="0">
+          <div class="icon-circle mb-4" style="margin:0 auto 1.25rem; width:72px; height:72px; font-size:2rem; background:rgba(27,67,50,0.1);">
+            <i class="fas fa-bullseye"></i>
+          </div>
+          <h3 style="font-family:'Montserrat',sans-serif; font-size:1.2rem; font-weight:800; color:var(--primary); margin-bottom:1rem;">Our Mission</h3>
+          <p style="color:var(--gray); line-height:1.85; font-size:0.92rem;">
+            To harness the potential of African diaspora resources in supporting social and economic development programs in the U.S. and Africa — creating awareness, unity, and action among diaspora communities.
+          </p>
+        </div>
+        <div class="pillar-card" data-aos="fade-up" data-aos-delay="120">
+          <div class="icon-circle mb-4" style="margin:0 auto 1.25rem; width:72px; height:72px; font-size:2rem; background:rgba(27,67,50,0.1);">
+            <i class="fas fa-eye"></i>
+          </div>
+          <h3 style="font-family:'Montserrat',sans-serif; font-size:1.2rem; font-weight:800; color:var(--primary); margin-bottom:1rem;">Our Vision</h3>
+          <p style="color:var(--gray); line-height:1.85; font-size:0.92rem;">
+            A unified, empowered African diaspora community in the United States that is actively invested in the social, cultural, and economic transformation of both America and Africa.
+          </p>
+        </div>
+        <div class="pillar-card" data-aos="fade-up" data-aos-delay="240">
+          <div class="icon-circle mb-4" style="margin:0 auto 1.25rem; width:72px; height:72px; font-size:2rem; background:rgba(27,67,50,0.1);">
+            <i class="fas fa-star"></i>
+          </div>
+          <h3 style="font-family:'Montserrat',sans-serif; font-size:1.2rem; font-weight:800; color:var(--primary); margin-bottom:1rem;">Our Purpose</h3>
+          <p style="color:var(--gray); line-height:1.85; font-size:0.92rem;">
+            To serve as the unifying voice of the African diaspora in America — bridging cultural divides, fostering partnerships, and creating opportunities that uplift communities on both continents.
+          </p>
+        </div>
+      </div>
+
+      <!-- Core Values -->
+      <div data-aos="fade-up">
+        <h3 style="font-family:'Montserrat',sans-serif; font-weight:800; font-size:1.5rem; color:var(--primary); text-align:center; margin-bottom:2.5rem;">Core Values</h3>
+        <div class="grid md:grid-cols-2 gap-5">
+          <div class="value-card" data-aos="fade-right" data-aos-delay="0">
+            <div style="display:flex; align-items:flex-start; gap:1rem;">
+              <i class="fas fa-hands-helping" style="font-size:1.5rem; color:var(--secondary); flex-shrink:0; margin-top:2px;"></i>
+              <div>
+                <h4 style="font-family:'Montserrat',sans-serif; font-weight:800; font-size:1rem; color:var(--primary); margin-bottom:0.4rem;">Unity</h4>
+                <p style="color:var(--gray); font-size:0.9rem; line-height:1.7;">We believe our strength lies in togetherness — bridging diverse African nations, cultures, and languages through shared purpose.</p>
+              </div>
+            </div>
+          </div>
+          <div class="value-card" data-aos="fade-left" data-aos-delay="60">
+            <div style="display:flex; align-items:flex-start; gap:1rem;">
+              <i class="fas fa-chart-bar" style="font-size:1.5rem; color:var(--secondary); flex-shrink:0; margin-top:2px;"></i>
+              <div>
+                <h4 style="font-family:'Montserrat',sans-serif; font-weight:800; font-size:1rem; color:var(--primary); margin-bottom:0.4rem;">Development</h4>
+                <p style="color:var(--gray); font-size:0.9rem; line-height:1.7;">Driving meaningful social and economic progress through strategic investment, programs, and community-led initiatives.</p>
+              </div>
+            </div>
+          </div>
+          <div class="value-card" data-aos="fade-right" data-aos-delay="120">
+            <div style="display:flex; align-items:flex-start; gap:1rem;">
+              <i class="fas fa-landmark" style="font-size:1.5rem; color:var(--secondary); flex-shrink:0; margin-top:2px;"></i>
+              <div>
+                <h4 style="font-family:'Montserrat',sans-serif; font-weight:800; font-size:1rem; color:var(--primary); margin-bottom:0.4rem;">Cultural Pride</h4>
+                <p style="color:var(--gray); font-size:0.9rem; line-height:1.7;">Celebrating and preserving African heritage, arts, and identity as a source of strength and community cohesion.</p>
+              </div>
+            </div>
+          </div>
+          <div class="value-card" data-aos="fade-left" data-aos-delay="180">
+            <div style="display:flex; align-items:flex-start; gap:1rem;">
+              <i class="fas fa-shield-alt" style="font-size:1.5rem; color:var(--secondary); flex-shrink:0; margin-top:2px;"></i>
+              <div>
+                <h4 style="font-family:'Montserrat',sans-serif; font-weight:800; font-size:1rem; color:var(--primary); margin-bottom:0.4rem;">Integrity</h4>
+                <p style="color:var(--gray); font-size:0.9rem; line-height:1.7;">Operating with full transparency, accountability, and ethical leadership in everything we do as a nonprofit organization.</p>
+              </div>
+            </div>
+          </div>
+          <div class="value-card" data-aos="fade-right" data-aos-delay="240">
+            <div style="display:flex; align-items:flex-start; gap:1rem;">
+              <i class="fas fa-lightbulb" style="font-size:1.5rem; color:var(--secondary); flex-shrink:0; margin-top:2px;"></i>
+              <div>
+                <h4 style="font-family:'Montserrat',sans-serif; font-weight:800; font-size:1rem; color:var(--primary); margin-bottom:0.4rem;">Innovation</h4>
+                <p style="color:var(--gray); font-size:0.9rem; line-height:1.7;">Embracing creative solutions and new technologies to connect diaspora communities and deliver lasting impact.</p>
+              </div>
+            </div>
+          </div>
+          <div class="value-card" data-aos="fade-left" data-aos-delay="300">
+            <div style="display:flex; align-items:flex-start; gap:1rem;">
+              <i class="fas fa-seedling" style="font-size:1.5rem; color:var(--secondary); flex-shrink:0; margin-top:2px;"></i>
+              <div>
+                <h4 style="font-family:'Montserrat',sans-serif; font-weight:800; font-size:1rem; color:var(--primary); margin-bottom:0.4rem;">Sustainability</h4>
+                <p style="color:var(--gray); font-size:0.9rem; line-height:1.7;">Building programs and partnerships designed for long-term impact — not just quick fixes — across generations.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── LEADERSHIP ─────────────────────────────── -->
+  <section class="section-pad" style="background:#fff;">
+    <div class="container-custom">
+      <div class="text-center mb-14" data-aos="fade-up">
+        <span class="section-label">Who Leads Us</span>
+        <h2 class="section-title">Our Leadership Team</h2>
+        <div class="section-divider center"></div>
+        <p style="color:var(--gray); max-width:580px; margin:0 auto; line-height:1.8;">
+          ADCUSA is powered by a dedicated team of volunteers who bring professional expertise and a deep commitment to the African diaspora.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+
+        <!-- Dr. Philip Mwalali -->
+        <div class="team-card" data-aos="fade-up" data-aos-delay="0" style="grid-column: span 1;">
+          <div class="team-avatar-placeholder">PM</div>
+          <h3 style="font-family:'Montserrat',sans-serif; font-weight:800; font-size:1.15rem; color:var(--primary);">Dr. Philip Mwalali MD</h3>
+          <p style="color:var(--secondary); font-family:'Montserrat',sans-serif; font-weight:600; font-size:0.82rem; letter-spacing:0.06em; text-transform:uppercase; margin:0.4rem 0 0.75rem;">Co-Founder &amp; Executive Director</p>
+          <p style="color:var(--gray); font-size:0.88rem; line-height:1.75;">
+            Dr. Mwalali is a physician and community visionary who co-founded ADCUSA with the conviction that the African diaspora can be a transformative force for development on both sides of the Atlantic.
+          </p>
+          <div style="margin-top:1.25rem; padding-top:1.25rem; border-top:1px solid #f0f0f0; display:flex; justify-content:center; gap:0.75rem;">
+            <a href="mailto:drmwalalip@yahoo.com" class="social-icon" style="border-color:rgba(27,67,50,0.2); color:var(--primary);" title="Email"><i class="fas fa-envelope"></i></a>
+            <a href="tel:+19199236188" class="social-icon" style="border-color:rgba(27,67,50,0.2); color:var(--primary);" title="Phone"><i class="fas fa-phone"></i></a>
+            <a href="https://www.facebook.com/adcusa1/" target="_blank" class="social-icon" style="border-color:rgba(27,67,50,0.2); color:var(--primary);" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+          </div>
+        </div>
+
+        <!-- Anthony Kumi -->
+        <div class="team-card" data-aos="fade-up" data-aos-delay="120">
+          <div class="team-avatar-placeholder" style="background:var(--secondary);">AK</div>
+          <h3 style="font-family:'Montserrat',sans-serif; font-weight:800; font-size:1.15rem; color:var(--primary);">Anthony Kumi</h3>
+          <p style="color:var(--secondary); font-family:'Montserrat',sans-serif; font-weight:600; font-size:0.82rem; letter-spacing:0.06em; text-transform:uppercase; margin:0.4rem 0 0.75rem;">Financial Secretary</p>
+          <p style="color:var(--gray); font-size:0.88rem; line-height:1.75;">
+            Anthony oversees financial operations and transparency for ADCUSA, ensuring responsible stewardship of community resources and organizational accountability.
+          </p>
+          <div style="margin-top:1.25rem; padding-top:1.25rem; border-top:1px solid #f0f0f0; display:flex; justify-content:center; gap:0.75rem;">
+            <a href="mailto:info@adcusa.org" class="social-icon" style="border-color:rgba(27,67,50,0.2); color:var(--primary);" title="Email"><i class="fas fa-envelope"></i></a>
+          </div>
+        </div>
+
+        <!-- Join the Team -->
+        <div class="team-card" data-aos="fade-up" data-aos-delay="240" style="background:var(--cream); border:2px dashed rgba(27,67,50,0.2);">
+          <div style="width:120px; height:120px; border-radius:50%; margin:0 auto 1.2rem; background:rgba(27,67,50,0.08); display:flex; align-items:center; justify-content:center; font-size:2.5rem; color:var(--primary);">
+            <i class="fas fa-plus"></i>
+          </div>
+          <h3 style="font-family:'Montserrat',sans-serif; font-weight:800; font-size:1.15rem; color:var(--primary);">Join Our Team</h3>
+          <p style="color:var(--gray); font-size:0.82rem; letter-spacing:0.06em; text-transform:uppercase; margin:0.4rem 0 0.75rem; font-family:'Montserrat',sans-serif; font-weight:600;">Volunteer Leadership</p>
+          <p style="color:var(--gray); font-size:0.88rem; line-height:1.75;">
+            ADCUSA is entirely volunteer-driven. We are always looking for passionate leaders to join our board and programs.
+          </p>
+          <a href="get-involved.html#volunteer" class="btn-primary" style="margin-top:1.25rem; font-size:0.85rem;">Get Involved</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── 501c3 INFO ─────────────────────────────── -->
+  <section style="background:var(--primary); padding:5rem 0;">
+    <div class="container-custom">
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div data-aos="fade-right">
+          <span style="color:var(--secondary); font-family:'Montserrat',sans-serif; font-size:0.75rem; font-weight:700; letter-spacing:0.18em; text-transform:uppercase; display:block; margin-bottom:0.6rem;">Nonprofit Status</span>
+          <h2 style="font-family:'Montserrat',sans-serif; font-size:clamp(1.8rem,3.5vw,2.8rem); font-weight:800; color:#fff; line-height:1.2; margin-bottom:1rem;">IRS-Recognized<br/>501(c)(3) Charity</h2>
+          <div style="width:60px; height:4px; background:var(--secondary); margin-bottom:1.5rem; border-radius:2px;"></div>
+          <p style="color:rgba(255,255,255,0.80); line-height:1.85; margin-bottom:1.2rem;">
+            ADCUSA is a federally recognized 501(c)(3) public charity. Your donations are <strong style="color:#fff;">tax-deductible</strong> to the fullest extent permitted by law.
+          </p>
+          <p style="color:rgba(255,255,255,0.70); line-height:1.85;">
+            We operate with the highest standards of nonprofit governance, with 100% of contributions going directly to programs and community initiatives.
+          </p>
+        </div>
+        <div data-aos="fade-left">
+          <div class="grid grid-cols-2 gap-4">
+            <div style="background:rgba(255,255,255,0.08); border-radius:8px; padding:1.5rem; text-align:center; border:1px solid rgba(255,255,255,0.12);">
+              <i class="fas fa-certificate" style="font-size:2rem; color:var(--secondary); margin-bottom:0.75rem; display:block;"></i>
+              <div style="font-family:'Montserrat',sans-serif; font-size:0.78rem; font-weight:700; color:#fff; letter-spacing:0.06em; text-transform:uppercase;">Status</div>
+              <div style="color:rgba(255,255,255,0.75); font-size:0.88rem; margin-top:0.4rem;">501(c)(3) Public Charity</div>
+            </div>
+            <div style="background:rgba(255,255,255,0.08); border-radius:8px; padding:1.5rem; text-align:center; border:1px solid rgba(255,255,255,0.12);">
+              <i class="fas fa-hashtag" style="font-size:2rem; color:var(--secondary); margin-bottom:0.75rem; display:block;"></i>
+              <div style="font-family:'Montserrat',sans-serif; font-size:0.78rem; font-weight:700; color:#fff; letter-spacing:0.06em; text-transform:uppercase;">EIN</div>
+              <div style="color:rgba(255,255,255,0.75); font-size:0.88rem; margin-top:0.4rem;">46-4204919</div>
+            </div>
+            <div style="background:rgba(255,255,255,0.08); border-radius:8px; padding:1.5rem; text-align:center; border:1px solid rgba(255,255,255,0.12);">
+              <i class="fas fa-calendar" style="font-size:2rem; color:var(--secondary); margin-bottom:0.75rem; display:block;"></i>
+              <div style="font-family:'Montserrat',sans-serif; font-size:0.78rem; font-weight:700; color:#fff; letter-spacing:0.06em; text-transform:uppercase;">Founded</div>
+              <div style="color:rgba(255,255,255,0.75); font-size:0.88rem; margin-top:0.4rem;">2015</div>
+            </div>
+            <div style="background:rgba(255,255,255,0.08); border-radius:8px; padding:1.5rem; text-align:center; border:1px solid rgba(255,255,255,0.12);">
+              <i class="fas fa-map-pin" style="font-size:2rem; color:var(--secondary); margin-bottom:0.75rem; display:block;"></i>
+              <div style="font-family:'Montserrat',sans-serif; font-size:0.78rem; font-weight:700; color:#fff; letter-spacing:0.06em; text-transform:uppercase;">Base</div>
+              <div style="color:rgba(255,255,255,0.75); font-size:0.88rem; margin-top:0.4rem;">Durham, NC</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── CTA ───────────────────────────────────── -->
+  <section style="background:var(--cream); padding:5rem 0; text-align:center;">
+    <div class="container-custom" data-aos="fade-up">
+      <span class="section-label" style="text-align:center; display:block;">Ready to Make a Difference?</span>
+      <h2 class="section-title" style="margin-bottom:1.5rem;">Join the Movement</h2>
+      <p style="color:var(--gray); max-width:540px; margin:0 auto 2.5rem; line-height:1.8;">
+        Whether you donate, volunteer, or become a member — your support strengthens the African diaspora community in America.
+      </p>
+      <div class="flex flex-wrap gap-4 justify-center">
+        <a href="get-involved.html" class="btn-primary">Get Involved Today</a>
+        <a href="programs.html" class="btn-outline-gold">Explore Our Programs</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FOOTER ─────────────────────────────────── -->
+  <footer>
+    <div class="container-custom">
+      <div class="grid md:grid-cols-4 gap-10 py-16 border-b footer-divider">
+        <div class="md:col-span-1">
+          <img src="../adcusalogo.png" alt="ADCUSA" style="height:180px; width:auto; margin-bottom:1.2rem;" />
+          <p style="color:rgba(255,255,255,0.65); font-size:0.88rem; line-height:1.8; margin-bottom:1.5rem;">Harnessing the potential of the African diaspora to support social and economic development in the U.S. and Africa.</p>
+          <div class="flex gap-3">
+            <a href="https://www.facebook.com/adcusa1/" target="_blank" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+        <div>
+          <h4 class="footer-heading">Quick Links</h4>
+          <a href="index.html" class="footer-link">Home</a>
+          <a href="about.html" class="footer-link">About ADCUSA</a>
+          <a href="programs.html" class="footer-link">Our Programs</a>
+          <a href="get-involved.html" class="footer-link">Get Involved</a>
+          <a href="contact.html" class="footer-link">Contact Us</a>
+        </div>
+        <div>
+          <h4 class="footer-heading">Programs</h4>
+          <a href="programs.html" class="footer-link">African Cultural Centers</a>
+          <a href="programs.html" class="footer-link">Professional Networking</a>
+          <a href="programs.html" class="footer-link">Entrepreneur Forums</a>
+          <a href="programs.html" class="footer-link">Youth Leadership</a>
+          <a href="programs.html" class="footer-link">Unity &amp; Advocacy</a>
+        </div>
+        <div>
+          <h4 class="footer-heading">Contact</h4>
+          <p class="footer-link"><i class="fas fa-map-marker-alt mr-2" style="color:var(--secondary);"></i>P.O. Box 12616 RTP<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Durham, NC 27709</p>
+          <a href="tel:+19199236188" class="footer-link"><i class="fas fa-phone mr-2" style="color:var(--secondary);"></i>(919) 923-6188</a>
+          <a href="mailto:drmwalalip@yahoo.com" class="footer-link"><i class="fas fa-envelope mr-2" style="color:var(--secondary);"></i>drmwalalip@yahoo.com</a>
+          <div style="margin-top:1.5rem;">
+            <h4 class="footer-heading">Newsletter</h4>
+            <form class="newsletter-form" style="display:flex; gap:0.5rem; margin-top:0.5rem;">
+              <input type="email" placeholder="Your email" class="form-input" style="background:rgba(255,255,255,0.08); border-color:rgba(255,255,255,0.15); color:#fff; font-size:0.85rem; padding:0.6rem 0.85rem;" />
+              <button type="submit" class="btn-secondary" style="padding:0.6rem 1rem; font-size:0.82rem; white-space:nowrap;">Subscribe</button>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="py-6 flex flex-wrap gap-4 items-center justify-between">
+        <p style="color:rgba(255,255,255,0.45); font-size:0.82rem;">&copy; 2025 African Diaspora Coalition of USA (ADCUSA). All rights reserved. EIN: 46-4204919</p>
+        <p style="color:rgba(255,255,255,0.35); font-size:0.78rem;"><a href="#" style="color:rgba(255,255,255,0.45); text-decoration:none;">Privacy Policy</a> &nbsp;·&nbsp; <a href="#" style="color:rgba(255,255,255,0.45); text-decoration:none;">Terms of Use</a> &nbsp;·&nbsp; adcusa.org</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

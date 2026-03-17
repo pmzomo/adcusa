@@ -1,0 +1,944 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ADCUSA — African Diaspora Coalition of USA | Unity for Development</title>
+  <meta name="description" content="Harnessing the potential of the African diaspora resources to support social and economic development programs in U.S. and Africa." />
+  <link rel="icon" type="image/png" href="../adcusalogo.png" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- AOS -->
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#1B4332',
+            'primary-dark': '#0F2419',
+            'primary-light': '#2D6A4F',
+            secondary: '#C8952A',
+            'secondary-light': '#E8B84B',
+            cream: '#FEF9EF',
+          },
+          fontFamily: {
+            heading: ['Montserrat', 'sans-serif'],
+            body: ['Inter', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="assets/css/custom.css" />
+</head>
+
+<body class="home-page">
+
+  <!-- ── NAVIGATION ───────────────────────────── -->
+  <nav id="navbar" class="fixed top-0 left-0 right-0 z-50">
+    <div class="container-custom">
+      <div class="flex items-center justify-between py-3">
+
+        <!-- Logo -->
+        <a href="index.html" class="flex items-center gap-3 no-underline">
+          <img src="../adcusalogo.png" alt="ADCUSA Logo" class="drop-shadow-lg" style="height:5.95rem; width:auto;" />
+          <div class="org-name hidden md:block" style="transition: color 0.3s;">
+            <div style="font-family:'Montserrat',sans-serif; font-weight:800; font-size:1.1rem; line-height:1.1; letter-spacing:0.04em;">ADCUSA</div>
+            <div style="font-family:'Inter',sans-serif; font-weight:400; font-size:0.72rem; letter-spacing:0.07em; opacity:0.85;">African Diaspora Coalition of USA</div>
+          </div>
+        </a>
+
+        <!-- Desktop Nav -->
+        <div class="hidden md:flex items-center gap-8">
+          <a href="index.html" class="nav-link">Home</a>
+          <a href="about.html" class="nav-link">About</a>
+          <a href="programs.html" class="nav-link">Programs</a>
+          <a href="get-involved.html" class="nav-link">Get Involved</a>
+          <a href="contact.html" class="nav-link">Contact</a>
+          <a href="get-involved.html#donate" class="btn-secondary" style="padding:0.55rem 1.4rem; font-size:0.82rem;">
+            <i class="fas fa-heart mr-1"></i> Donate
+          </a>
+        </div>
+
+        <!-- Mobile Hamburger -->
+        <button id="menu-btn" class="md:hidden p-2 rounded focus:outline-none" aria-label="Menu">
+          <svg id="icon-open" class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/></svg>
+          <svg id="icon-close" class="w-7 h-7 hidden" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>
+        </button>
+      </div>
+
+      <!-- Mobile Menu -->
+      <div id="mobile-menu" class="hidden md:hidden pb-4">
+        <div class="flex flex-col gap-1 bg-primary rounded-lg p-4 mt-1">
+          <a href="index.html" class="text-white font-semibold py-2 px-3 rounded hover:bg-white/10 transition">Home</a>
+          <a href="about.html" class="text-white font-semibold py-2 px-3 rounded hover:bg-white/10 transition">About</a>
+          <a href="programs.html" class="text-white font-semibold py-2 px-3 rounded hover:bg-white/10 transition">Programs</a>
+          <a href="get-involved.html" class="text-white font-semibold py-2 px-3 rounded hover:bg-white/10 transition">Get Involved</a>
+          <a href="contact.html" class="text-white font-semibold py-2 px-3 rounded hover:bg-white/10 transition">Contact</a>
+          <a href="get-involved.html#donate" class="btn-secondary mt-2 text-center" style="padding:0.65rem;">
+            <i class="fas fa-heart mr-1"></i> Donate Now
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ── HERO ─────────────────────────────────── -->
+  <section class="hero-section">
+    <!-- Animated Africa Canvas -->
+    <canvas id="hero-canvas" style="position:absolute;inset:0;width:100%;height:100%;display:block;z-index:0;"></canvas>
+    <!-- Subtle overlay for text readability -->
+    <div style="position:absolute;inset:0;background:linear-gradient(105deg,rgba(4,12,8,0.72) 0%,rgba(8,22,14,0.50) 45%,rgba(4,12,8,0.38) 100%);z-index:1;pointer-events:none;"></div>
+
+    <div class="hero-content" style="padding-top: 5rem; position:relative; z-index:2;">
+      <!-- Badge -->
+      <div class="inline-flex items-center gap-2 mb-6 px-4 py-2 rounded-full" style="background:rgba(200,149,42,0.25); border:1px solid rgba(200,149,42,0.5); backdrop-filter:blur(6px);">
+        <span style="color:var(--secondary); font-size:0.75rem; font-weight:700; letter-spacing:0.14em; text-transform:uppercase; font-family:'Montserrat',sans-serif;">501(c)(3) Nonprofit · Est. 2015 · Durham, NC</span>
+      </div>
+
+      <h1 class="fade-up" style="font-family:'Montserrat',sans-serif; font-size:clamp(2.8rem,7vw,5.5rem); font-weight:900; line-height:1.05; letter-spacing:-0.02em; margin-bottom:1.25rem;">
+        Unity<br/>
+        <span style="color: var(--secondary);">for Development</span>
+      </h1>
+
+      <p class="fade-in" style="font-size:clamp(1rem,2vw,1.25rem); line-height:1.75; color:rgba(255,255,255,0.88); max-width:680px; margin:0 auto 2.5rem; animation-delay:0.3s;">
+        Harnessing the potential of the African diaspora to support social and economic development programs in the U.S. and Africa.
+      </p>
+
+      <div class="flex flex-wrap gap-4 justify-center" style="animation: fadeUp 0.8s ease 0.6s both;">
+        <a href="about.html" class="btn-outline-white" style="font-size:0.9rem;">
+          <i class="fas fa-compass mr-2"></i>Our Story
+        </a>
+        <a href="get-involved.html#donate" class="btn-secondary" style="font-size:0.9rem;">
+          <i class="fas fa-hand-holding-heart mr-2"></i>Support Our Mission
+        </a>
+      </div>
+
+      <!-- Scroll indicator -->
+      <div class="mt-16" style="animation: fadeIn 1s ease 1.2s both;">
+        <a href="#mission" style="color:rgba(255,255,255,0.55); font-size:0.8rem; letter-spacing:0.1em; text-transform:uppercase; font-family:'Montserrat',sans-serif; text-decoration:none;">
+          <i class="fas fa-chevron-down block text-center text-xl mb-1" style="animation: bounce 2s infinite;"></i>
+          Scroll to explore
+        </a>
+      </div>
+    </div>
+
+    <style>@keyframes bounce{0%,100%{transform:translateY(0)}50%{transform:translateY(8px)}}</style>
+  </section>
+
+  <!-- ── TICKER ────────────────────────────────── -->
+  <div class="ticker-band py-3">
+    <div class="ticker-inner">
+      <span style="font-family:'Montserrat',sans-serif; font-weight:700; font-size:0.82rem; color:#fff; letter-spacing:0.08em; text-transform:uppercase;">
+        &nbsp;&nbsp;&nbsp; Unity for Development &nbsp; ✦ &nbsp; African Diaspora Coalition of USA &nbsp; ✦ &nbsp; Social & Economic Development &nbsp; ✦ &nbsp; Durham, NC &nbsp; ✦ &nbsp; Est. 2015 &nbsp; ✦ &nbsp; 501(c)(3) Nonprofit &nbsp; ✦ &nbsp; Harnessing the Power of the Diaspora &nbsp; ✦ &nbsp; EIN: 46-4204919 &nbsp; ✦ &nbsp; Cultural Awareness &nbsp; ✦ &nbsp; Professional Forums &nbsp; ✦ &nbsp; Youth Leadership &nbsp; ✦ &nbsp; Investor &amp; Entrepreneur Networks &nbsp; ✦ &nbsp;
+      </span>
+      <span style="font-family:'Montserrat',sans-serif; font-weight:700; font-size:0.82rem; color:#fff; letter-spacing:0.08em; text-transform:uppercase;" aria-hidden="true">
+        &nbsp;&nbsp;&nbsp; Unity for Development &nbsp; ✦ &nbsp; African Diaspora Coalition of USA &nbsp; ✦ &nbsp; Social & Economic Development &nbsp; ✦ &nbsp; Durham, NC &nbsp; ✦ &nbsp; Est. 2015 &nbsp; ✦ &nbsp; 501(c)(3) Nonprofit &nbsp; ✦ &nbsp; Harnessing the Power of the Diaspora &nbsp; ✦ &nbsp; EIN: 46-4204919 &nbsp; ✦ &nbsp; Cultural Awareness &nbsp; ✦ &nbsp; Professional Forums &nbsp; ✦ &nbsp; Youth Leadership &nbsp; ✦ &nbsp; Investor &amp; Entrepreneur Networks &nbsp; ✦ &nbsp;
+      </span>
+    </div>
+  </div>
+
+  <!-- ── MISSION PILLARS ────────────────────────── -->
+  <section id="mission" class="section-pad" style="background:#fff;">
+    <div class="container-custom">
+      <div class="text-center mb-14" data-aos="fade-up">
+        <span class="section-label">What We Stand For</span>
+        <h2 class="section-title">Our Three Pillars</h2>
+        <div class="section-divider center"></div>
+        <p style="color:var(--gray); max-width:620px; margin:0 auto; line-height:1.8;">
+          Every initiative we lead is rooted in three interconnected principles that guide our work across continents.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="pillar-card" data-aos="fade-up" data-aos-delay="0">
+          <div style="font-size:3rem; margin-bottom:1.2rem;">🤝</div>
+          <h3 style="font-family:'Montserrat',sans-serif; font-size:1.3rem; font-weight:800; color:var(--primary); margin-bottom:0.75rem;">Unity & Awareness</h3>
+          <p style="color:var(--gray); line-height:1.8; font-size:0.95rem;">Creating awareness of the need for unity among African diaspora communities, breaking barriers and building bridges across generations and borders.</p>
+        </div>
+        <div class="pillar-card" data-aos="fade-up" data-aos-delay="120">
+          <div style="font-size:3rem; margin-bottom:1.2rem;">📈</div>
+          <h3 style="font-family:'Montserrat',sans-serif; font-size:1.3rem; font-weight:800; color:var(--primary); margin-bottom:0.75rem;">Economic Development</h3>
+          <p style="color:var(--gray); line-height:1.8; font-size:0.95rem;">Facilitating investor and entrepreneur forums that channel diaspora resources into sustainable businesses and economic growth in the U.S. and Africa.</p>
+        </div>
+        <div class="pillar-card" data-aos="fade-up" data-aos-delay="240">
+          <div style="font-size:3rem; margin-bottom:1.2rem;">🏛️</div>
+          <h3 style="font-family:'Montserrat',sans-serif; font-size:1.3rem; font-weight:800; color:var(--primary); margin-bottom:0.75rem;">Cultural Preservation</h3>
+          <p style="color:var(--gray); line-height:1.8; font-size:0.95rem;">Establishing African cultural centers as vibrant spaces for heritage, arts, and community — keeping African identity alive for future generations in America.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── STATS ─────────────────────────────────── -->
+  <section class="stats-section section-pad-sm">
+    <div class="container-custom">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8 relative z-10">
+        <div class="text-center" data-aos="fade-up">
+          <div class="stat-number" data-counter="2015" data-prefix="EST. "></div>
+          <div class="stat-label">Year Founded</div>
+        </div>
+        <div class="text-center" data-aos="fade-up" data-aos-delay="100">
+          <div class="stat-number" data-counter="5" data-suffix="+"></div>
+          <div class="stat-label">States Active</div>
+        </div>
+        <div class="text-center" data-aos="fade-up" data-aos-delay="200">
+          <div class="stat-number" data-counter="6" data-suffix="+"></div>
+          <div class="stat-label">Core Programs</div>
+        </div>
+        <div class="text-center" data-aos="fade-up" data-aos-delay="300">
+          <div class="stat-number" data-counter="100" data-suffix="%"></div>
+          <div class="stat-label">Volunteer-Driven</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── ABOUT PREVIEW ────────────────────────── -->
+  <section class="section-pad" style="background: var(--cream);">
+    <div class="container-custom">
+      <div class="grid md:grid-cols-2 gap-16 items-center">
+        <div data-aos="fade-right">
+          <div style="position:relative; border-radius:8px; overflow:hidden; box-shadow:0 24px 60px rgba(0,0,0,0.18);">
+            <img
+              src="../adimage/2148931100.jpg"
+              alt="African diaspora community"
+              style="width:100%; height:460px; object-fit:cover; display:block;"
+              onerror="this.style.background='var(--primary)'; this.style.height='460px'; this.removeAttribute('src');"
+            />
+            <!-- Badge overlay -->
+            <div style="position:absolute; bottom:2rem; left:2rem; background:var(--secondary); color:#fff; border-radius:6px; padding:1rem 1.5rem;">
+              <div style="font-family:'Montserrat',sans-serif; font-size:2rem; font-weight:900; line-height:1;">501(c)(3)</div>
+              <div style="font-size:0.78rem; letter-spacing:0.08em; text-transform:uppercase; opacity:0.9;">Certified Nonprofit</div>
+            </div>
+          </div>
+        </div>
+
+        <div data-aos="fade-left">
+          <span class="section-label">Who We Are</span>
+          <h2 class="section-title">The Voice of the African Diaspora in America</h2>
+          <div class="section-divider"></div>
+          <p style="color:var(--gray); line-height:1.9; margin-bottom:1.2rem;">
+            Founded in 2015 in Durham, North Carolina, the <strong style="color:var(--primary);">African Diaspora Coalition of USA (ADCUSA)</strong> was created to harness the vast potential of the African diaspora community in driving meaningful change — both in America and across the African continent.
+          </p>
+          <p style="color:var(--gray); line-height:1.9; margin-bottom:2rem;">
+            Led by Co-Founder and Executive Director <strong style="color:var(--primary);">Dr. Philip Mwalali MD</strong>, ADCUSA brings together African professionals, entrepreneurs, and community leaders to build networks, cultural centers, and economic opportunities that transcend borders.
+          </p>
+
+          <div class="grid grid-cols-2 gap-4 mb-2.5">
+            <div style="display:flex; align-items:flex-start; gap:0.75rem;">
+              <i class="fas fa-check-circle" style="color:var(--secondary); margin-top:2px; flex-shrink:0;"></i>
+              <span style="color:var(--gray); font-size:0.92rem;">Professional networking forums</span>
+            </div>
+            <div style="display:flex; align-items:flex-start; gap:0.75rem;">
+              <i class="fas fa-check-circle" style="color:var(--secondary); margin-top:2px; flex-shrink:0;"></i>
+              <span style="color:var(--gray); font-size:0.92rem;">Cultural heritage centers</span>
+            </div>
+            <div style="display:flex; align-items:flex-start; gap:0.75rem;">
+              <i class="fas fa-check-circle" style="color:var(--secondary); margin-top:2px; flex-shrink:0;"></i>
+              <span style="color:var(--gray); font-size:0.92rem;">Entrepreneur &amp; investor forums</span>
+            </div>
+            <div style="display:flex; align-items:flex-start; gap:0.75rem;">
+              <i class="fas fa-check-circle" style="color:var(--secondary); margin-top:2px; flex-shrink:0;"></i>
+              <span style="color:var(--gray); font-size:0.92rem;">Youth leadership programs</span>
+            </div>
+          </div>
+
+          <a href="about.html" class="btn-primary" style="margin-top:1.5rem; font-size:0.9rem;">
+            Learn Our Full Story <i class="fas fa-arrow-right ml-2"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── PROGRAMS PREVIEW ──────────────────────── -->
+  <section class="section-pad" style="background:#fff;">
+    <div class="container-custom">
+      <div class="text-center mb-14" data-aos="fade-up">
+        <span class="section-label">What We Do</span>
+        <h2 class="section-title">Our Programs &amp; Initiatives</h2>
+        <div class="section-divider center"></div>
+        <p style="color:var(--gray); max-width:600px; margin:0 auto; line-height:1.8;">
+          From cultural centers to business forums, our programs are designed to uplift, connect, and empower the African diaspora.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+        <!-- Program 1 -->
+        <div class="program-card" data-aos="fade-up" data-aos-delay="0">
+          <div style="height:200px; overflow:hidden; background:var(--primary);">
+            <img src="../adimage/2149029454.jpg"
+              alt="Cultural Centers" style="width:100%; height:100%; object-fit:cover; opacity:0.85;"
+              onerror="this.style.display='none';" />
+          </div>
+          <div style="padding:1.75rem;">
+            <div class="icon-circle mb-3"><i class="fas fa-building"></i></div>
+            <h3 style="font-family:'Montserrat',sans-serif; font-size:1.1rem; font-weight:800; color:var(--primary); margin-bottom:0.6rem;">African Cultural Centers</h3>
+            <p style="color:var(--gray); font-size:0.9rem; line-height:1.75; margin-bottom:1rem;">Creating spaces that celebrate African heritage, arts, and community life across North Carolina and beyond.</p>
+            <a href="programs.html" style="color:var(--secondary); font-family:'Montserrat',sans-serif; font-weight:700; font-size:0.85rem; text-decoration:none;">Learn More <i class="fas fa-arrow-right ml-1"></i></a>
+          </div>
+        </div>
+
+        <!-- Program 2 -->
+        <div class="program-card" data-aos="fade-up" data-aos-delay="100">
+          <div style="height:200px; overflow:hidden; background:var(--primary);">
+            <img src="../adimage/128008.jpg"
+              alt="Professional Forums" style="width:100%; height:100%; object-fit:cover; opacity:0.85;"
+              onerror="this.style.display='none';" />
+          </div>
+          <div style="padding:1.75rem;">
+            <div class="icon-circle mb-3"><i class="fas fa-users"></i></div>
+            <h3 style="font-family:'Montserrat',sans-serif; font-size:1.1rem; font-weight:800; color:var(--primary); margin-bottom:0.6rem;">Professional Networking</h3>
+            <p style="color:var(--gray); font-size:0.9rem; line-height:1.75; margin-bottom:1rem;">Connecting African diaspora professionals in healthcare, law, tech, business, and education to advance careers and collaborate.</p>
+            <a href="programs.html" style="color:var(--secondary); font-family:'Montserrat',sans-serif; font-weight:700; font-size:0.85rem; text-decoration:none;">Learn More <i class="fas fa-arrow-right ml-1"></i></a>
+          </div>
+        </div>
+
+        <!-- Program 3 -->
+        <div class="program-card" data-aos="fade-up" data-aos-delay="200">
+          <div style="height:200px; overflow:hidden; background:var(--primary);">
+            <img src="../adimage/8971.jpg"
+              alt="Entrepreneur Forums" style="width:100%; height:100%; object-fit:cover; opacity:0.85;"
+              onerror="this.style.display='none';" />
+          </div>
+          <div style="padding:1.75rem;">
+            <div class="icon-circle mb-3"><i class="fas fa-chart-line"></i></div>
+            <h3 style="font-family:'Montserrat',sans-serif; font-size:1.1rem; font-weight:800; color:var(--primary); margin-bottom:0.6rem;">Entrepreneur &amp; Investor Forums</h3>
+            <p style="color:var(--gray); font-size:0.9rem; line-height:1.75; margin-bottom:1rem;">Facilitating investment and entrepreneurship opportunities that channel diaspora resources into sustainable economic growth.</p>
+            <a href="programs.html" style="color:var(--secondary); font-family:'Montserrat',sans-serif; font-weight:700; font-size:0.85rem; text-decoration:none;">Learn More <i class="fas fa-arrow-right ml-1"></i></a>
+          </div>
+        </div>
+
+        <!-- Program 4 -->
+        <div class="program-card" data-aos="fade-up" data-aos-delay="0">
+          <div style="height:200px; overflow:hidden; background:var(--primary);">
+            <img src="../adimage/2149156423.jpg"
+              alt="Youth Leadership" style="width:100%; height:100%; object-fit:cover; opacity:0.85;"
+              onerror="this.style.display='none';" />
+          </div>
+          <div style="padding:1.75rem;">
+            <div class="icon-circle mb-3"><i class="fas fa-graduation-cap"></i></div>
+            <h3 style="font-family:'Montserrat',sans-serif; font-size:1.1rem; font-weight:800; color:var(--primary); margin-bottom:0.6rem;">Youth Leadership</h3>
+            <p style="color:var(--gray); font-size:0.9rem; line-height:1.75; margin-bottom:1rem;">Empowering the next generation of African diaspora leaders with mentorship, scholarships, and leadership development.</p>
+            <a href="programs.html" style="color:var(--secondary); font-family:'Montserrat',sans-serif; font-weight:700; font-size:0.85rem; text-decoration:none;">Learn More <i class="fas fa-arrow-right ml-1"></i></a>
+          </div>
+        </div>
+
+        <!-- Program 5 -->
+        <div class="program-card" data-aos="fade-up" data-aos-delay="100">
+          <div style="height:200px; overflow:hidden; background:var(--primary);">
+            <img src="../adimage/2148604504.jpg"
+              alt="Unity Advocacy" style="width:100%; height:100%; object-fit:cover; opacity:0.85;"
+              onerror="this.style.display='none';" />
+          </div>
+          <div style="padding:1.75rem;">
+            <div class="icon-circle mb-3"><i class="fas fa-fist-raised"></i></div>
+            <h3 style="font-family:'Montserrat',sans-serif; font-size:1.1rem; font-weight:800; color:var(--primary); margin-bottom:0.6rem;">Unity &amp; Advocacy</h3>
+            <p style="color:var(--gray); font-size:0.9rem; line-height:1.75; margin-bottom:1rem;">Advocating for policies that benefit African diaspora communities and promoting civic engagement across the United States.</p>
+            <a href="programs.html" style="color:var(--secondary); font-family:'Montserrat',sans-serif; font-weight:700; font-size:0.85rem; text-decoration:none;">Learn More <i class="fas fa-arrow-right ml-1"></i></a>
+          </div>
+        </div>
+
+        <!-- Program 6 - CTA card -->
+        <div class="program-card flex flex-col justify-center items-center text-center" style="background:var(--primary); padding:2.5rem;" data-aos="fade-up" data-aos-delay="200">
+          <i class="fas fa-globe-africa" style="font-size:3rem; color:var(--secondary); margin-bottom:1.5rem;"></i>
+          <h3 style="font-family:'Montserrat',sans-serif; font-size:1.2rem; font-weight:800; color:#fff; margin-bottom:0.75rem;">Explore All Programs</h3>
+          <p style="color:rgba(255,255,255,0.75); font-size:0.9rem; line-height:1.7; margin-bottom:1.5rem;">See the full scope of our work across the African diaspora community in the U.S. and Africa.</p>
+          <a href="programs.html" class="btn-outline-white" style="font-size:0.85rem;">View All Programs</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── QUOTE BAND ─────────────────────────────── -->
+  <section style="background:var(--cream); padding:5rem 0;">
+    <div class="container-custom">
+      <div class="quote-band p-10 rounded-lg" data-aos="fade-up">
+        <div class="grid md:grid-cols-3 gap-8 items-center">
+          <div class="md:col-span-2">
+            <i class="fas fa-quote-left" style="font-size:2.5rem; color:var(--secondary); opacity:0.5; margin-bottom:1rem; display:block;"></i>
+            <blockquote class="big-quote">
+              "Harnessing the potential of the African diaspora resources to support social and economic development programs in the U.S. and Africa."
+            </blockquote>
+            <div style="margin-top:1.5rem; font-family:'Montserrat',sans-serif; font-weight:700; color:var(--primary);">
+              — Dr. Philip Mwalali MD
+              <span style="color:var(--gray); font-weight:400; font-size:0.9rem;"> · Co-Founder &amp; Executive Director</span>
+            </div>
+          </div>
+          <div class="text-center md:text-right">
+            <img src="../adcusalogo.png" alt="ADCUSA" style="height:160px; width:auto; display:inline-block; filter:drop-shadow(0 8px 24px rgba(27,67,50,0.2));" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── GET INVOLVED CTA ──────────────────────── -->
+  <section class="cta-band section-pad">
+    <div class="container-custom relative z-10">
+      <div class="grid md:grid-cols-3 gap-6">
+
+        <div class="involve-card" data-aos="fade-up" data-aos-delay="0">
+          <div style="background:var(--secondary); padding:2.5rem; height:100%;">
+            <i class="fas fa-hand-holding-heart" style="font-size:2.5rem; color:#fff; margin-bottom:1.2rem; display:block;"></i>
+            <h3 style="font-family:'Montserrat',sans-serif; font-size:1.3rem; font-weight:800; color:#fff; margin-bottom:0.75rem;">Donate</h3>
+            <p style="color:rgba(255,255,255,0.85); font-size:0.92rem; line-height:1.75; margin-bottom:1.5rem;">Your contribution powers cultural programs, professional forums, and youth initiatives across communities.</p>
+            <a href="get-involved.html#donate" style="color:#fff; font-family:'Montserrat',sans-serif; font-weight:700; font-size:0.85rem; text-decoration:none; border-bottom:2px solid rgba(255,255,255,0.5);">Give Today <i class="fas fa-arrow-right ml-1"></i></a>
+          </div>
+        </div>
+
+        <div class="involve-card" data-aos="fade-up" data-aos-delay="120">
+          <div style="background:rgba(255,255,255,0.10); backdrop-filter:blur(10px); border:1px solid rgba(255,255,255,0.20); padding:2.5rem; height:100%;">
+            <i class="fas fa-people-carry" style="font-size:2.5rem; color:var(--secondary); margin-bottom:1.2rem; display:block;"></i>
+            <h3 style="font-family:'Montserrat',sans-serif; font-size:1.3rem; font-weight:800; color:#fff; margin-bottom:0.75rem;">Volunteer</h3>
+            <p style="color:rgba(255,255,255,0.80); font-size:0.92rem; line-height:1.75; margin-bottom:1.5rem;">Join our all-volunteer team and contribute your skills, time, and passion to uplift the diaspora community.</p>
+            <a href="get-involved.html#volunteer" style="color:var(--secondary); font-family:'Montserrat',sans-serif; font-weight:700; font-size:0.85rem; text-decoration:none; border-bottom:2px solid rgba(200,149,42,0.5);">Join the Team <i class="fas fa-arrow-right ml-1"></i></a>
+          </div>
+        </div>
+
+        <div class="involve-card" data-aos="fade-up" data-aos-delay="240">
+          <div style="background:rgba(255,255,255,0.10); backdrop-filter:blur(10px); border:1px solid rgba(255,255,255,0.20); padding:2.5rem; height:100%;">
+            <i class="fas fa-id-card-alt" style="font-size:2.5rem; color:var(--secondary); margin-bottom:1.2rem; display:block;"></i>
+            <h3 style="font-family:'Montserrat',sans-serif; font-size:1.3rem; font-weight:800; color:#fff; margin-bottom:0.75rem;">Become a Member</h3>
+            <p style="color:rgba(255,255,255,0.80); font-size:0.92rem; line-height:1.75; margin-bottom:1.5rem;">Become an official member of ADCUSA and gain access to exclusive events, networking opportunities, and resources.</p>
+            <a href="get-involved.html#membership" style="color:var(--secondary); font-family:'Montserrat',sans-serif; font-weight:700; font-size:0.85rem; text-decoration:none; border-bottom:2px solid rgba(200,149,42,0.5);">Join ADCUSA <i class="fas fa-arrow-right ml-1"></i></a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── NEWS & UPDATES ────────────────────────── -->
+  <section class="section-pad" style="background:#fff;">
+    <div class="container-custom">
+      <div class="flex flex-wrap items-end justify-between gap-4 mb-12" data-aos="fade-up">
+        <div>
+          <span class="section-label">Stay Informed</span>
+          <h2 class="section-title">News &amp; Updates</h2>
+          <div class="section-divider"></div>
+        </div>
+        <a href="contact.html" class="btn-outline-gold" style="font-size:0.85rem;">Subscribe for Updates</a>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-8">
+
+        <div class="news-card" data-aos="fade-up" data-aos-delay="0">
+          <div style="height:200px; overflow:hidden; background:var(--primary);">
+            <img src="../adimage/15911.jpg"
+              alt="Community Event" style="width:100%; height:100%; object-fit:cover;"
+              onerror="this.style.display='none';" />
+          </div>
+          <div style="padding:1.5rem;">
+            <span style="background:rgba(200,149,42,0.15); color:var(--secondary); font-size:0.75rem; font-weight:700; letter-spacing:0.08em; text-transform:uppercase; padding:0.3rem 0.75rem; border-radius:20px; font-family:'Montserrat',sans-serif;">Community</span>
+            <h4 style="font-family:'Montserrat',sans-serif; font-weight:800; font-size:1.05rem; color:var(--primary); margin:0.75rem 0 0.5rem; line-height:1.3;">Annual African Diaspora Unity Forum — Save the Date</h4>
+            <p style="color:var(--gray); font-size:0.88rem; line-height:1.7;">Join us for our annual gathering of African diaspora professionals, entrepreneurs, and community leaders in Durham, NC.</p>
+            <div style="margin-top:1rem; display:flex; align-items:center; justify-content:space-between;">
+              <span style="color:var(--gray); font-size:0.8rem;"><i class="far fa-calendar mr-1"></i> 2025</span>
+              <a href="contact.html" style="color:var(--secondary); font-weight:700; font-size:0.82rem; font-family:'Montserrat',sans-serif; text-decoration:none;">Get in Touch →</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="news-card" data-aos="fade-up" data-aos-delay="120">
+          <div style="height:200px; overflow:hidden; background:var(--primary);">
+            <img src="../adimage/89675.jpg"
+              alt="Africa Development" style="width:100%; height:100%; object-fit:cover;"
+              onerror="this.style.display='none';" />
+          </div>
+          <div style="padding:1.5rem;">
+            <span style="background:rgba(27,67,50,0.10); color:var(--primary); font-size:0.75rem; font-weight:700; letter-spacing:0.08em; text-transform:uppercase; padding:0.3rem 0.75rem; border-radius:20px; font-family:'Montserrat',sans-serif;">Development</span>
+            <h4 style="font-family:'Montserrat',sans-serif; font-weight:800; font-size:1.05rem; color:var(--primary); margin:0.75rem 0 0.5rem; line-height:1.3;">ADCUSA Launches New Entrepreneur Network Initiative</h4>
+            <p style="color:var(--gray); font-size:0.88rem; line-height:1.7;">A new initiative connecting African-American entrepreneurs with business opportunities and mentorship across the diaspora.</p>
+            <div style="margin-top:1rem; display:flex; align-items:center; justify-content:space-between;">
+              <span style="color:var(--gray); font-size:0.8rem;"><i class="far fa-calendar mr-1"></i> 2025</span>
+              <a href="programs.html" style="color:var(--secondary); font-weight:700; font-size:0.82rem; font-family:'Montserrat',sans-serif; text-decoration:none;">Get in Touch →</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="news-card" data-aos="fade-up" data-aos-delay="240">
+          <div style="height:200px; overflow:hidden; background:var(--primary);">
+            <img src="../adimage/14289.jpg"
+              alt="Youth Programs" style="width:100%; height:100%; object-fit:cover;"
+              onerror="this.style.display='none';" />
+          </div>
+          <div style="padding:1.5rem;">
+            <span style="background:rgba(155,35,53,0.10); color:var(--red-accent,#9B2335); font-size:0.75rem; font-weight:700; letter-spacing:0.08em; text-transform:uppercase; padding:0.3rem 0.75rem; border-radius:20px; font-family:'Montserrat',sans-serif;">Youth</span>
+            <h4 style="font-family:'Montserrat',sans-serif; font-weight:800; font-size:1.05rem; color:var(--primary); margin:0.75rem 0 0.5rem; line-height:1.3;">Youth Leadership Program Applications Now Open</h4>
+            <p style="color:var(--gray); font-size:0.88rem; line-height:1.7;">We are accepting applications for our youth leadership development program aimed at the next generation of diaspora leaders.</p>
+            <div style="margin-top:1rem; display:flex; align-items:center; justify-content:space-between;">
+              <span style="color:var(--gray); font-size:0.8rem;"><i class="far fa-calendar mr-1"></i> 2025</span>
+              <a href="get-involved.html" style="color:var(--secondary); font-weight:700; font-size:0.82rem; font-family:'Montserrat',sans-serif; text-decoration:none;">Apply Now →</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FOOTER ─────────────────────────────────── -->
+  <footer>
+    <div class="container-custom">
+      <!-- Top Footer -->
+      <div class="grid md:grid-cols-4 gap-10 py-16 border-b footer-divider">
+
+        <!-- Brand -->
+        <div class="md:col-span-1">
+          <img src="../adcusalogo.png" alt="ADCUSA" style="height:180px; width:auto; margin-bottom:1.2rem;" />
+          <p style="color:rgba(255,255,255,0.65); font-size:0.88rem; line-height:1.8; margin-bottom:1.5rem;">
+            Harnessing the potential of the African diaspora to support social and economic development in the U.S. and Africa.
+          </p>
+          <div class="flex gap-3">
+            <a href="https://www.facebook.com/adcusa1/" target="_blank" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div>
+          <h4 class="footer-heading">Quick Links</h4>
+          <a href="index.html" class="footer-link">Home</a>
+          <a href="about.html" class="footer-link">About ADCUSA</a>
+          <a href="programs.html" class="footer-link">Our Programs</a>
+          <a href="get-involved.html" class="footer-link">Get Involved</a>
+          <a href="contact.html" class="footer-link">Contact Us</a>
+        </div>
+
+        <!-- Programs -->
+        <div>
+          <h4 class="footer-heading">Programs</h4>
+          <a href="programs.html" class="footer-link">African Cultural Centers</a>
+          <a href="programs.html" class="footer-link">Professional Networking</a>
+          <a href="programs.html" class="footer-link">Entrepreneur Forums</a>
+          <a href="programs.html" class="footer-link">Youth Leadership</a>
+          <a href="programs.html" class="footer-link">Unity &amp; Advocacy</a>
+        </div>
+
+        <!-- Contact + Newsletter -->
+        <div>
+          <h4 class="footer-heading">Contact</h4>
+          <p class="footer-link"><i class="fas fa-map-marker-alt mr-2" style="color:var(--secondary);"></i>P.O. Box 12616 RTP<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Durham, NC 27709</p>
+          <a href="tel:+19199236188" class="footer-link"><i class="fas fa-phone mr-2" style="color:var(--secondary);"></i>(919) 923-6188</a>
+          <a href="mailto:drmwalalip@yahoo.com" class="footer-link"><i class="fas fa-envelope mr-2" style="color:var(--secondary);"></i>drmwalalip@yahoo.com</a>
+          <div style="margin-top:1.5rem;">
+            <h4 class="footer-heading">Newsletter</h4>
+            <form class="newsletter-form" style="display:flex; gap:0.5rem; margin-top:0.5rem;">
+              <input type="email" placeholder="Your email" class="form-input" style="background:rgba(255,255,255,0.08); border-color:rgba(255,255,255,0.15); color:#fff; font-size:0.85rem; padding:0.6rem 0.85rem;" />
+              <button type="submit" class="btn-secondary" style="padding:0.6rem 1rem; font-size:0.82rem; white-space:nowrap;">Subscribe</button>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom Footer -->
+      <div class="py-6 flex flex-wrap gap-4 items-center justify-between">
+        <p style="color:rgba(255,255,255,0.45); font-size:0.82rem;">
+          &copy; 2025 African Diaspora Coalition of USA (ADCUSA). All rights reserved. EIN: 46-4204919
+        </p>
+        <p style="color:rgba(255,255,255,0.35); font-size:0.78rem;">
+          <a href="#" style="color:rgba(255,255,255,0.45); text-decoration:none;">Privacy Policy</a> &nbsp;·&nbsp;
+          <a href="#" style="color:rgba(255,255,255,0.45); text-decoration:none;">Terms of Use</a> &nbsp;·&nbsp;
+          adcusa.org
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script src="assets/js/main.js"></script>
+
+  <!-- ── AFRICA HERO CANVAS ANIMATION ────────────── -->
+  <script>
+  (function () {
+    'use strict';
+
+    const canvas = document.getElementById('hero-canvas');
+    if (!canvas) return;
+    const ctx = canvas.getContext('2d');
+
+    /* ── Africa outline ─────────────────────────
+       Reference coordinate space: 400 × 480
+       Clockwise from Morocco NW, based on real lon/lat mapping.
+       Each sub-comment marks a geographic region.
+    ──────────────────────────────────────────── */
+    const AF_W = 400, AF_H = 480;
+    const AF = [
+      /* N Mediterranean coast */
+      [71,14],[100,6],[148,5],[177,10],
+      [246,36],[282,46],[300,51],
+      /* NE → Red Sea → Horn */
+      [314,72],[332,144],[350,173],
+      [398,171], /* ← Horn tip, easternmost */
+      [365,202],[344,264],
+      /* East coast → Cape */
+      [332,285],[332,330],[332,357],
+      [304,391],[292,430],[282,457],
+      [252,476],[218,476], /* southernmost */
+      [206,474],
+      /* West coast → N */
+      [197,440],[188,424],[186,398],
+      [172,354],[172,312],[172,278],
+      [155,237],[151,207],
+      /* Gulf of Guinea curve */
+      [138,204],[115,192],[98,198],
+      [92,200],[75,198],[61,202],
+      /* W Africa bulge → Senegal */
+      [32,182],[21,165],[12,154],
+      [3,133], /* ← Dakar, westernmost */
+      [6,98],[6,91],
+      /* Morocco → close */
+      [24,49],[53,33],[71,14]
+    ];
+
+    /* ── Major cities (in AF coords) ─────────── */
+    const CITIES = [
+      { name:'Cairo',         x:296, y:55,  r:4.5 },
+      { name:'Lagos',         x:132, y:199, r:5.5 },
+      { name:'Accra',         x:100, y:199, r:3.5 },
+      { name:'Nairobi',       x:328, y:292, r:4.5 },
+      { name:'Addis Ababa',   x:342, y:166, r:4   },
+      { name:'Kinshasa',      x:170, y:256, r:3.5 },
+      { name:'Cape Town',     x:202, y:470, r:4.5 },
+      { name:'Dar es Salaam', x:330, y:322, r:3   },
+    ];
+
+    /* ── State ──────────────────────────────── */
+    let W, H, SC, OX, OY;
+    let drawProgress = 0, drawDone = false;
+    let t = 0, lastTime = 0;
+    let particles = [];
+    let fontsReady = false;
+
+    /* ── Resize ─────────────────────────────── */
+    function resize() {
+      W = canvas.width  = window.innerWidth;
+      H = canvas.height = window.innerHeight;
+      /* Scale Africa to fill ~80% height, ~55% width */
+      SC = Math.min((W * 0.55) / AF_W, (H * 0.84) / AF_H);
+      /* Position: horizontally centered, vertically centered */
+      OX = W * 0.54 - (AF_W * SC) / 2;
+      OY = H * 0.50 - (AF_H * SC) / 2;
+      initParticles();
+    }
+
+    function toC(rx, ry) { return [OX + rx * SC, OY + ry * SC]; }
+
+    /* ── Particles ──────────────────────────── */
+    function initParticles() {
+      particles = [];
+      for (let i = 0; i < 80; i++) {
+        particles.push({
+          x: Math.random() * W,
+          y: Math.random() * H,
+          r: Math.random() * 1.6 + 0.4,
+          vx: (Math.random() - 0.5) * 0.22,
+          vy: -Math.random() * 0.18 - 0.05,
+          a: Math.random() * 0.45 + 0.05,
+          gold: Math.random() > 0.55
+        });
+      }
+    }
+
+    /* ── Background ─────────────────────────── */
+    function drawBg() {
+      const g = ctx.createRadialGradient(W * 0.54, H * 0.50, 0, W * 0.54, H * 0.50, Math.max(W, H) * 0.75);
+      g.addColorStop(0,   '#1e3f2c');
+      g.addColorStop(0.4, '#112418');
+      g.addColorStop(1,   '#060d09');
+      ctx.fillStyle = g;
+      ctx.fillRect(0, 0, W, H);
+    }
+
+    /* ── Dot grid ───────────────────────────── */
+    function drawGrid() {
+      const sp = 38;
+      for (let gx = 0; gx < W; gx += sp)
+        for (let gy = 0; gy < H; gy += sp) {
+          ctx.beginPath();
+          ctx.arc(gx, gy, 0.75, 0, Math.PI * 2);
+          ctx.fillStyle = 'rgba(200,149,42,0.07)';
+          ctx.fill();
+        }
+    }
+
+    /* ── Catmull-Rom smooth path ─────────────── */
+    function catmullRomPath(pts, count) {
+      if (count < 2) return;
+      const tension = 0.38;
+      ctx.moveTo(pts[0][0], pts[0][1]);
+      for (let i = 0; i < count - 1; i++) {
+        const p0 = pts[Math.max(0, i - 1)];
+        const p1 = pts[i];
+        const p2 = pts[Math.min(pts.length - 1, i + 1)];
+        const p3 = pts[Math.min(pts.length - 1, i + 2)];
+        const cp1x = p1[0] + (p2[0] - p0[0]) * tension;
+        const cp1y = p1[1] + (p2[1] - p0[1]) * tension;
+        const cp2x = p2[0] - (p3[0] - p1[0]) * tension;
+        const cp2y = p2[1] - (p3[1] - p1[1]) * tension;
+        ctx.bezierCurveTo(cp1x, cp1y, cp2x, cp2y, p2[0], p2[1]);
+      }
+    }
+
+    /* ── Compute canvas points ───────────────── */
+    function canvasPts() { return AF.map(([rx, ry]) => toC(rx, ry)); }
+
+    /* ── Africa fill glow ───────────────────── */
+    function drawFill(pts) {
+      if (!drawDone) return;
+      const [cx, cy] = toC(200, 240);
+      const g = ctx.createRadialGradient(cx, cy, 0, cx, cy, 220 * SC);
+      const pulse = 0.5 + 0.5 * Math.sin(t * 0.6);
+      g.addColorStop(0,   `rgba(50,140,90,${0.12 * pulse})`);
+      g.addColorStop(0.6, `rgba(27,67,50,${0.06 * pulse})`);
+      g.addColorStop(1,   'rgba(27,67,50,0)');
+      ctx.save();
+      ctx.beginPath();
+      pts.forEach(([x, y], i) => i === 0 ? ctx.moveTo(x, y) : ctx.lineTo(x, y));
+      ctx.closePath();
+      ctx.fillStyle = g;
+      ctx.fill();
+      ctx.restore();
+    }
+
+    /* ── Africa stroke ──────────────────────── */
+    function drawStroke(pts, progress) {
+      const count = Math.max(2, Math.floor(progress * (pts.length - 1)));
+      ctx.save();
+      ctx.beginPath();
+      catmullRomPath(pts, count);
+      const glowAlpha = drawDone ? 0.55 + 0.25 * Math.sin(t * 0.9) : 0.85;
+      ctx.shadowBlur  = drawDone ? 18 : 10;
+      ctx.shadowColor = `rgba(200,149,42,${glowAlpha * 0.7})`;
+      ctx.strokeStyle = `rgba(200,149,42,${glowAlpha})`;
+      ctx.lineWidth   = Math.max(1.2, 2 * SC);
+      ctx.lineCap     = 'round';
+      ctx.lineJoin    = 'round';
+      ctx.stroke();
+      ctx.restore();
+    }
+
+    /* ── Drawing cursor (pen tip) ───────────── */
+    function drawCursor(pts, progress) {
+      if (drawDone) return;
+      const total = pts.length - 1;
+      const idx   = Math.min(Math.floor(progress * total), pts.length - 2);
+      const frac  = (progress * total) - idx;
+      const [x1, y1] = pts[idx];
+      const [x2, y2] = pts[idx + 1];
+      const px = x1 + (x2 - x1) * frac;
+      const py = y1 + (y2 - y1) * frac;
+      ctx.save();
+      /* Outer glow ring */
+      ctx.beginPath();
+      ctx.arc(px, py, 10, 0, Math.PI * 2);
+      ctx.strokeStyle = 'rgba(200,149,42,0.25)';
+      ctx.lineWidth = 1;
+      ctx.stroke();
+      /* Inner bright dot */
+      ctx.beginPath();
+      ctx.arc(px, py, 4, 0, Math.PI * 2);
+      ctx.fillStyle = '#fff';
+      ctx.shadowBlur  = 20;
+      ctx.shadowColor = '#C8952A';
+      ctx.fill();
+      ctx.restore();
+    }
+
+    /* ── City dots ──────────────────────────── */
+    function drawCities(progress) {
+      const reveal = Math.max(0, (progress - 0.25) / 0.75);
+      if (reveal <= 0) return;
+      CITIES.forEach((city, i) => {
+        const [cx, cy] = toC(city.x, city.y);
+        const phase    = Math.sin(t * 1.6 + i * 1.05);
+        const pulseSz  = city.r * (1 + 0.35 * phase);
+
+        ctx.save();
+        /* Outer pulse ring */
+        ctx.beginPath();
+        ctx.arc(cx, cy, pulseSz + 5 + 3 * Math.max(0, phase), 0, Math.PI * 2);
+        ctx.strokeStyle = `rgba(200,149,42,${0.18 * reveal})`;
+        ctx.lineWidth = 1;
+        ctx.stroke();
+        /* Mid glow */
+        ctx.beginPath();
+        ctx.arc(cx, cy, pulseSz + 2, 0, Math.PI * 2);
+        ctx.fillStyle = `rgba(200,149,42,${0.12 * reveal})`;
+        ctx.fill();
+        /* Core */
+        ctx.beginPath();
+        ctx.arc(cx, cy, pulseSz, 0, Math.PI * 2);
+        ctx.fillStyle = `rgba(232,184,75,${0.9 * reveal})`;
+        ctx.shadowBlur  = 14;
+        ctx.shadowColor = 'rgba(200,149,42,0.9)';
+        ctx.fill();
+        /* Label */
+        if (reveal > 0.6 && SC > 0.55) {
+          ctx.font      = `bold 10px Montserrat,sans-serif`;
+          ctx.fillStyle = `rgba(255,255,255,${0.82 * reveal})`;
+          ctx.shadowBlur = 0;
+          ctx.fillText(city.name, cx + city.r + 5, cy + 4);
+        }
+        ctx.restore();
+      });
+    }
+
+    /* ── Diaspora arcs (Durham NC → Africa) ─── */
+    function drawArcs(progress) {
+      if (!drawDone) return;
+      /* NC sits upper-left, representing USA */
+      const ncX = W * 0.10, ncY = H * 0.22;
+
+      /* NC marker */
+      ctx.save();
+      const ncPulse = 0.8 + 0.2 * Math.sin(t * 2.2);
+      ctx.beginPath();
+      ctx.arc(ncX, ncY, 6 * ncPulse, 0, Math.PI * 2);
+      ctx.fillStyle = '#fff';
+      ctx.shadowBlur  = 18;
+      ctx.shadowColor = 'rgba(255,255,255,0.9)';
+      ctx.fill();
+      /* NC label */
+      ctx.font      = 'bold 11px Montserrat,sans-serif';
+      ctx.fillStyle = 'rgba(255,255,255,0.92)';
+      ctx.shadowBlur = 0;
+      ctx.fillText('Durham, NC · USA', ncX + 10, ncY - 10);
+      ctx.restore();
+
+      /* Arcs to selected cities */
+      const targets = [
+        { city: CITIES[0], offset: 0    }, // Cairo
+        { city: CITIES[1], offset: 0.22 }, // Lagos
+        { city: CITIES[3], offset: 0.44 }, // Nairobi
+        { city: CITIES[4], offset: 0.66 }, // Addis Ababa
+        { city: CITIES[6], offset: 0.12 }, // Cape Town
+      ];
+
+      targets.forEach(({ city, offset }) => {
+        const [cx, cy] = toC(city.x, city.y);
+        /* Control point: high arc above canvas */
+        const midX = (ncX + cx) * 0.5;
+        const midY = Math.min(ncY, cy) - H * 0.28;
+
+        /* Faint dashed path */
+        ctx.save();
+        ctx.beginPath();
+        ctx.moveTo(ncX, ncY);
+        ctx.quadraticCurveTo(midX, midY, cx, cy);
+        ctx.strokeStyle = 'rgba(200,149,42,0.10)';
+        ctx.lineWidth   = 1;
+        ctx.setLineDash([5, 7]);
+        ctx.stroke();
+        ctx.setLineDash([]);
+
+        /* Animated traveling dot */
+        const arcT  = ((t * 0.28 + offset) % 1.0);
+        const px    = (1-arcT)*(1-arcT)*ncX + 2*(1-arcT)*arcT*midX + arcT*arcT*cx;
+        const py    = (1-arcT)*(1-arcT)*ncY + 2*(1-arcT)*arcT*midY + arcT*arcT*cy;
+        const alpha = Math.sin(arcT * Math.PI); /* fade in/out */
+        ctx.beginPath();
+        ctx.arc(px, py, 3, 0, Math.PI * 2);
+        ctx.fillStyle   = `rgba(232,184,75,${0.85 * alpha})`;
+        ctx.shadowBlur  = 10;
+        ctx.shadowColor = 'rgba(200,149,42,0.9)';
+        ctx.fill();
+        ctx.restore();
+      });
+    }
+
+    /* ── Floating particles ─────────────────── */
+    function drawParticles() {
+      particles.forEach(p => {
+        ctx.beginPath();
+        ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+        ctx.fillStyle = p.gold
+          ? `rgba(200,149,42,${p.a})`
+          : `rgba(255,255,255,${p.a * 0.55})`;
+        ctx.fill();
+        p.x += p.vx;
+        p.y += p.vy;
+        if (p.y < -5) { p.y = H + 5; p.x = Math.random() * W; }
+        if (p.x < -5) p.x = W + 5;
+        if (p.x > W + 5) p.x = -5;
+      });
+    }
+
+    /* ── Latitude / longitude grid (subtle) ─── */
+    function drawGeoGrid() {
+      /* Horizontal lines across Africa area */
+      ctx.save();
+      ctx.strokeStyle = 'rgba(200,149,42,0.04)';
+      ctx.lineWidth   = 0.8;
+      for (let row = 0; row < 9; row++) {
+        const y = OY + (AF_H / 8) * row * SC;
+        ctx.beginPath();
+        ctx.moveTo(OX - 20 * SC, y);
+        ctx.lineTo(OX + (AF_W + 20) * SC, y);
+        ctx.stroke();
+      }
+      for (let col = 0; col < 9; col++) {
+        const x = OX + (AF_W / 8) * col * SC;
+        ctx.beginPath();
+        ctx.moveTo(x, OY - 20 * SC);
+        ctx.lineTo(x, OY + (AF_H + 20) * SC);
+        ctx.stroke();
+      }
+      ctx.restore();
+    }
+
+    /* ── Main loop ──────────────────────────── */
+    function animate(ts) {
+      const dt = Math.min((ts - lastTime) / 1000, 0.05);
+      lastTime = ts;
+      t += dt;
+
+      if (!drawDone) {
+        drawProgress += dt * 0.30; /* ~3.3 s to draw full continent */
+        if (drawProgress >= 1) { drawProgress = 1; drawDone = true; }
+      }
+
+      ctx.clearRect(0, 0, W, H);
+      drawBg();
+      drawGrid();
+      drawGeoGrid();
+
+      const pts = canvasPts();
+      drawFill(pts);
+      drawStroke(pts, drawProgress);
+      drawCursor(pts, drawProgress);
+      drawCities(drawProgress);
+      drawArcs(drawProgress);
+      drawParticles();
+
+      requestAnimationFrame(animate);
+    }
+
+    resize();
+    window.addEventListener('resize', () => { resize(); drawProgress = 0; drawDone = false; });
+    requestAnimationFrame(animate);
+
+  })();
+  </script>
+</body>
+</html>

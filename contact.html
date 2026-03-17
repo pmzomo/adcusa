@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact ADCUSA — African Diaspora Coalition of USA</title>
+  <meta name="description" content="Get in touch with the African Diaspora Coalition of USA. Based in Durham, NC. Call, email, or send us a message." />
+  <link rel="icon" type="image/png" href="../adcusalogo.png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#1B4332', 'primary-dark': '#0F2419', 'primary-light': '#2D6A4F',
+            secondary: '#C8952A', 'secondary-light': '#E8B84B', cream: '#FEF9EF',
+          },
+          fontFamily: { heading: ['Montserrat', 'sans-serif'], body: ['Inter', 'sans-serif'] }
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="assets/css/custom.css" />
+</head>
+
+<body>
+
+  <!-- ── NAVIGATION ───────────────────────────── -->
+  <nav id="navbar" class="fixed top-0 left-0 right-0 z-50">
+    <div class="container-custom">
+      <div class="flex items-center justify-between py-3">
+        <a href="index.html" class="flex items-center gap-3 no-underline">
+          <img src="../adcusalogo.png" alt="ADCUSA Logo" class="drop-shadow-lg" style="height:5.95rem; width:auto;" />
+          <div class="org-name hidden md:block">
+            <div style="font-family:'Montserrat',sans-serif; font-weight:800; font-size:1.1rem; line-height:1.1; letter-spacing:0.04em; color:var(--primary);">ADCUSA</div>
+            <div style="font-family:'Inter',sans-serif; font-weight:400; font-size:0.72rem; letter-spacing:0.07em; opacity:0.75; color:var(--primary);">African Diaspora Coalition of USA</div>
+          </div>
+        </a>
+        <div class="hidden md:flex items-center gap-8">
+          <a href="index.html" class="nav-link">Home</a>
+          <a href="about.html" class="nav-link">About</a>
+          <a href="programs.html" class="nav-link">Programs</a>
+          <a href="get-involved.html" class="nav-link">Get Involved</a>
+          <a href="contact.html" class="nav-link active">Contact</a>
+          <a href="get-involved.html#donate" class="btn-secondary" style="padding:0.55rem 1.4rem; font-size:0.82rem;"><i class="fas fa-heart mr-1"></i> Donate</a>
+        </div>
+        <button id="menu-btn" class="md:hidden p-2 rounded focus:outline-none" aria-label="Menu">
+          <svg id="icon-open" class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/></svg>
+          <svg id="icon-close" class="w-7 h-7 hidden" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>
+        </button>
+      </div>
+      <div id="mobile-menu" class="hidden md:hidden pb-4">
+        <div class="flex flex-col gap-1 bg-primary rounded-lg p-4 mt-1">
+          <a href="index.html" class="text-white font-semibold py-2 px-3 rounded hover:bg-white/10 transition">Home</a>
+          <a href="about.html" class="text-white font-semibold py-2 px-3 rounded hover:bg-white/10 transition">About</a>
+          <a href="programs.html" class="text-white font-semibold py-2 px-3 rounded hover:bg-white/10 transition">Programs</a>
+          <a href="get-involved.html" class="text-white font-semibold py-2 px-3 rounded hover:bg-white/10 transition">Get Involved</a>
+          <a href="contact.html" class="text-white font-semibold py-2 px-3 rounded hover:bg-white/10 transition">Contact</a>
+          <a href="get-involved.html#donate" class="btn-secondary mt-2 text-center" style="padding:0.65rem;"><i class="fas fa-heart mr-1"></i> Donate Now</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ── PAGE HERO ─────────────────────────────── -->
+  <section class="page-hero" style="margin-top:0; padding-top:72px;">
+    <div class="page-hero-bg" style="background-image:url('../adimage/973.jpg');"></div>
+    <div class="page-hero-overlay"></div>
+    <div class="container-custom page-hero-content w-full">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="index.html"><i class="fas fa-home mr-1"></i>Home</a>
+        <span>/</span><span style="color:#fff;">Contact</span>
+      </nav>
+      <h1 style="font-family:'Montserrat',sans-serif; font-size:clamp(2rem,5vw,3.5rem); font-weight:900; color:#fff; line-height:1.1;">Contact <span style="color:var(--secondary);">Us</span></h1>
+      <p style="color:rgba(255,255,255,0.80); font-size:1.05rem; margin-top:0.75rem; max-width:600px; line-height:1.75;">We'd love to hear from you. Reach out to connect, partner, donate, or learn more about ADCUSA.</p>
+    </div>
+  </section>
+
+  <!-- ── CONTACT CARDS ──────────────────────────── -->
+  <section class="section-pad-sm" style="background:var(--primary);">
+    <div class="container-custom">
+      <div class="grid md:grid-cols-4 gap-5">
+
+        <div style="background:rgba(255,255,255,0.08); border:1px solid rgba(255,255,255,0.15); border-radius:10px; padding:2rem; text-align:center; transition:all 0.3s;" onmouseover="this.style.background='rgba(255,255,255,0.12)'" onmouseout="this.style.background='rgba(255,255,255,0.08)'" data-aos="fade-up" data-aos-delay="0">
+          <div style="width:52px; height:52px; border-radius:50%; background:var(--secondary); display:flex; align-items:center; justify-content:center; margin:0 auto 1rem; font-size:1.25rem; color:#fff;">
+            <i class="fas fa-phone"></i>
+          </div>
+          <h4 style="font-family:'Montserrat',sans-serif; font-weight:700; font-size:0.82rem; letter-spacing:0.1em; text-transform:uppercase; color:var(--secondary); margin-bottom:0.5rem;">Phone</h4>
+          <a href="tel:+19199236188" style="color:#fff; font-family:'Montserrat',sans-serif; font-weight:600; font-size:1rem; text-decoration:none;">(919) 923-6188</a>
+          <p style="color:rgba(255,255,255,0.55); font-size:0.78rem; margin-top:0.4rem;">Dr. Philip Mwalali MD</p>
+        </div>
+
+        <div style="background:rgba(255,255,255,0.08); border:1px solid rgba(255,255,255,0.15); border-radius:10px; padding:2rem; text-align:center; transition:all 0.3s;" onmouseover="this.style.background='rgba(255,255,255,0.12)'" onmouseout="this.style.background='rgba(255,255,255,0.08)'" data-aos="fade-up" data-aos-delay="100">
+          <div style="width:52px; height:52px; border-radius:50%; background:var(--secondary); display:flex; align-items:center; justify-content:center; margin:0 auto 1rem; font-size:1.25rem; color:#fff;">
+            <i class="fas fa-envelope"></i>
+          </div>
+          <h4 style="font-family:'Montserrat',sans-serif; font-weight:700; font-size:0.82rem; letter-spacing:0.1em; text-transform:uppercase; color:var(--secondary); margin-bottom:0.5rem;">Email</h4>
+          <a href="mailto:drmwalalip@yahoo.com" style="color:#fff; font-family:'Montserrat',sans-serif; font-weight:600; font-size:0.92rem; text-decoration:none; word-break:break-all;">drmwalalip@yahoo.com</a>
+          <p style="color:rgba(255,255,255,0.55); font-size:0.78rem; margin-top:0.4rem;">General Inquiries</p>
+        </div>
+
+        <div style="background:rgba(255,255,255,0.08); border:1px solid rgba(255,255,255,0.15); border-radius:10px; padding:2rem; text-align:center; transition:all 0.3s;" onmouseover="this.style.background='rgba(255,255,255,0.12)'" onmouseout="this.style.background='rgba(255,255,255,0.08)'" data-aos="fade-up" data-aos-delay="200">
+          <div style="width:52px; height:52px; border-radius:50%; background:var(--secondary); display:flex; align-items:center; justify-content:center; margin:0 auto 1rem; font-size:1.25rem; color:#fff;">
+            <i class="fas fa-map-marker-alt"></i>
+          </div>
+          <h4 style="font-family:'Montserrat',sans-serif; font-weight:700; font-size:0.82rem; letter-spacing:0.1em; text-transform:uppercase; color:var(--secondary); margin-bottom:0.5rem;">Address</h4>
+          <p style="color:#fff; font-family:'Montserrat',sans-serif; font-weight:600; font-size:0.92rem; line-height:1.5;">P.O. Box 12616 RTP<br/>Durham, NC 27709</p>
+        </div>
+
+        <div style="background:rgba(255,255,255,0.08); border:1px solid rgba(255,255,255,0.15); border-radius:10px; padding:2rem; text-align:center; transition:all 0.3s;" onmouseover="this.style.background='rgba(255,255,255,0.12)'" onmouseout="this.style.background='rgba(255,255,255,0.08)'" data-aos="fade-up" data-aos-delay="300">
+          <div style="width:52px; height:52px; border-radius:50%; background:var(--secondary); display:flex; align-items:center; justify-content:center; margin:0 auto 1rem; font-size:1.25rem; color:#fff;">
+            <i class="fab fa-facebook-f"></i>
+          </div>
+          <h4 style="font-family:'Montserrat',sans-serif; font-weight:700; font-size:0.82rem; letter-spacing:0.1em; text-transform:uppercase; color:var(--secondary); margin-bottom:0.5rem;">Facebook</h4>
+          <a href="https://www.facebook.com/adcusa1/" target="_blank" style="color:#fff; font-family:'Montserrat',sans-serif; font-weight:600; font-size:0.92rem; text-decoration:none;">@adcusa1</a>
+          <p style="color:rgba(255,255,255,0.55); font-size:0.78rem; margin-top:0.4rem;">Follow &amp; Message Us</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── CONTACT FORM + MAP ─────────────────────── -->
+  <section class="section-pad" style="background:#fff;">
+    <div class="container-custom">
+      <div class="grid md:grid-cols-2 gap-14 items-start">
+
+        <!-- Form -->
+        <div data-aos="fade-right">
+          <span class="section-label">Send a Message</span>
+          <h2 class="section-title">Get in Touch</h2>
+          <div class="section-divider"></div>
+          <p style="color:var(--gray); line-height:1.9; margin-bottom:2rem;">
+            Whether you have a question about our programs, want to partner with us, or are interested in donating or volunteering — we'd love to hear from you. Fill out the form below and we'll respond promptly.
+          </p>
+
+          <form id="contact-form" class="flex flex-col gap-5">
+            <div class="grid grid-cols-2 gap-4">
+              <div>
+                <label class="form-label">First Name *</label>
+                <input type="text" class="form-input" placeholder="First name" required />
+              </div>
+              <div>
+                <label class="form-label">Last Name *</label>
+                <input type="text" class="form-input" placeholder="Last name" required />
+              </div>
+            </div>
+
+            <div>
+              <label class="form-label">Email Address *</label>
+              <input type="email" class="form-input" placeholder="your@email.com" required />
+            </div>
+
+            <div>
+              <label class="form-label">Phone Number</label>
+              <input type="tel" class="form-input" placeholder="(919) 000-0000" />
+            </div>
+
+            <div>
+              <label class="form-label">I am reaching out about *</label>
+              <select class="form-input" required>
+                <option value="">Select a topic...</option>
+                <option>General Inquiry</option>
+                <option>Donating / Giving</option>
+                <option>Volunteering</option>
+                <option>Membership</option>
+                <option>Partnership / Sponsorship</option>
+                <option>Youth Programs</option>
+                <option>Professional Forums</option>
+                <option>Media / Press</option>
+                <option>Other</option>
+              </select>
+            </div>
+
+            <div>
+              <label class="form-label">Organization / Company</label>
+              <input type="text" class="form-input" placeholder="Your organization (optional)" />
+            </div>
+
+            <div>
+              <label class="form-label">Message *</label>
+              <textarea class="form-input" rows="5" placeholder="Tell us how we can help you or how you'd like to get involved..." required></textarea>
+            </div>
+
+            <!-- Newsletter opt-in -->
+            <div style="display:flex; align-items:flex-start; gap:0.75rem;">
+              <input type="checkbox" id="newsletter-opt" style="accent-color:var(--primary); margin-top:3px; flex-shrink:0;" />
+              <label for="newsletter-opt" style="color:var(--gray); font-size:0.88rem; line-height:1.65; cursor:pointer;">
+                Subscribe me to the ADCUSA newsletter for updates on programs, events, and community news.
+              </label>
+            </div>
+
+            <button type="submit" class="btn-primary" style="font-size:0.95rem;">
+              Send Message <i class="fas fa-paper-plane ml-2"></i>
+            </button>
+          </form>
+        </div>
+
+        <!-- Map + Info -->
+        <div data-aos="fade-left">
+
+          <!-- Map -->
+          <div class="map-container mb-8">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d52175.6!2d-78.8986!3d35.9940!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89ace7f1a80e7a49%3A0x4de4a7b9e8726!2sDurham%2C%20NC%2027709!5e0!3m2!1sen!2sus!4v1710000000000"
+              width="100%"
+              height="300"
+              style="border:0; display:block;"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              title="ADCUSA Location — Durham, NC">
+            </iframe>
+          </div>
+
+          <!-- Hours & Info -->
+          <div style="background:var(--cream); border-radius:10px; padding:2rem; margin-bottom:1.5rem;">
+            <h4 style="font-family:'Montserrat',sans-serif; font-weight:800; font-size:1rem; color:var(--primary); margin-bottom:1.25rem;">
+              <i class="fas fa-clock mr-2" style="color:var(--secondary);"></i>Response Times
+            </h4>
+            <div class="flex flex-col gap-2">
+              <div style="display:flex; justify-content:space-between; align-items:center; padding:0.5rem 0; border-bottom:1px solid rgba(0,0,0,0.06);">
+                <span style="color:var(--gray); font-size:0.9rem;">General Inquiries</span>
+                <span style="color:var(--primary); font-weight:600; font-size:0.88rem;">Within 48 hours</span>
+              </div>
+              <div style="display:flex; justify-content:space-between; align-items:center; padding:0.5rem 0; border-bottom:1px solid rgba(0,0,0,0.06);">
+                <span style="color:var(--gray); font-size:0.9rem;">Partnership Requests</span>
+                <span style="color:var(--primary); font-weight:600; font-size:0.88rem;">Within 3–5 days</span>
+              </div>
+              <div style="display:flex; justify-content:space-between; align-items:center; padding:0.5rem 0;">
+                <span style="color:var(--gray); font-size:0.9rem;">Donation Receipts</span>
+                <span style="color:var(--primary); font-weight:600; font-size:0.88rem;">Immediate / Same day</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Social Media -->
+          <div style="background:#fff; border:1.5px solid #e5e7eb; border-radius:10px; padding:2rem;">
+            <h4 style="font-family:'Montserrat',sans-serif; font-weight:800; font-size:1rem; color:var(--primary); margin-bottom:1.25rem;">
+              <i class="fas fa-share-alt mr-2" style="color:var(--secondary);"></i>Follow &amp; Connect
+            </h4>
+            <div class="flex flex-col gap-3">
+              <a href="https://www.facebook.com/adcusa1/" target="_blank" style="display:flex; align-items:center; gap:1rem; text-decoration:none; padding:0.85rem; border-radius:8px; background:rgba(24,119,242,0.07); transition:all 0.25s;" onmouseover="this.style.background='rgba(24,119,242,0.14)'" onmouseout="this.style.background='rgba(24,119,242,0.07)'">
+                <i class="fab fa-facebook-f" style="width:20px; color:#1877F2; font-size:1.1rem; text-align:center;"></i>
+                <div>
+                  <div style="font-family:'Montserrat',sans-serif; font-weight:700; font-size:0.88rem; color:var(--primary);">Facebook</div>
+                  <div style="color:var(--gray); font-size:0.78rem;">facebook.com/adcusa1</div>
+                </div>
+                <i class="fas fa-external-link-alt" style="margin-left:auto; color:var(--gray); font-size:0.75rem;"></i>
+              </a>
+              <a href="#" style="display:flex; align-items:center; gap:1rem; text-decoration:none; padding:0.85rem; border-radius:8px; background:rgba(29,161,242,0.07); transition:all 0.25s;" onmouseover="this.style.background='rgba(29,161,242,0.14)'" onmouseout="this.style.background='rgba(29,161,242,0.07)'">
+                <i class="fab fa-twitter" style="width:20px; color:#1DA1F2; font-size:1.1rem; text-align:center;"></i>
+                <div>
+                  <div style="font-family:'Montserrat',sans-serif; font-weight:700; font-size:0.88rem; color:var(--primary);">Twitter / X</div>
+                  <div style="color:var(--gray); font-size:0.78rem;">Follow for updates</div>
+                </div>
+              </a>
+              <a href="#" style="display:flex; align-items:center; gap:1rem; text-decoration:none; padding:0.85rem; border-radius:8px; background:rgba(193,53,132,0.07); transition:all 0.25s;" onmouseover="this.style.background='rgba(193,53,132,0.14)'" onmouseout="this.style.background='rgba(193,53,132,0.07)'">
+                <i class="fab fa-instagram" style="width:20px; color:#C13584; font-size:1.1rem; text-align:center;"></i>
+                <div>
+                  <div style="font-family:'Montserrat',sans-serif; font-weight:700; font-size:0.88rem; color:var(--primary);">Instagram</div>
+                  <div style="color:var(--gray); font-size:0.78rem;">Follow our journey</div>
+                </div>
+              </a>
+              <a href="#" style="display:flex; align-items:center; gap:1rem; text-decoration:none; padding:0.85rem; border-radius:8px; background:rgba(10,102,194,0.07); transition:all 0.25s;" onmouseover="this.style.background='rgba(10,102,194,0.14)'" onmouseout="this.style.background='rgba(10,102,194,0.07)'">
+                <i class="fab fa-linkedin-in" style="width:20px; color:#0A66C2; font-size:1.1rem; text-align:center;"></i>
+                <div>
+                  <div style="font-family:'Montserrat',sans-serif; font-weight:700; font-size:0.88rem; color:var(--primary);">LinkedIn</div>
+                  <div style="color:var(--gray); font-size:0.78rem;">Connect professionally</div>
+                </div>
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FAQ ───────────────────────────────────── -->
+  <section class="section-pad" style="background:var(--cream);">
+    <div class="container-custom">
+      <div class="text-center mb-12" data-aos="fade-up">
+        <span class="section-label">Common Questions</span>
+        <h2 class="section-title">Frequently Asked Questions</h2>
+        <div class="section-divider center"></div>
+      </div>
+
+      <div class="max-w-3xl mx-auto flex flex-col gap-4">
+
+        <div class="card" style="box-shadow:0 2px 12px rgba(0,0,0,0.06);" data-aos="fade-up" data-aos-delay="0">
+          <details style="padding:1.5rem;">
+            <summary style="font-family:'Montserrat',sans-serif; font-weight:700; font-size:1rem; color:var(--primary); cursor:pointer; list-style:none; display:flex; justify-content:space-between; align-items:center;">
+              Is ADCUSA a registered nonprofit?
+              <i class="fas fa-plus" style="color:var(--secondary); flex-shrink:0; margin-left:1rem;"></i>
+            </summary>
+            <p style="color:var(--gray); font-size:0.92rem; line-height:1.8; margin-top:1rem;">Yes. ADCUSA is a federally recognized 501(c)(3) public charity (EIN: 46-4204919). All donations are tax-deductible to the fullest extent permitted by law. We were founded in 2015 and are classified under NTEE code A23 for Cultural and Ethnic Awareness.</p>
+          </details>
+        </div>
+
+        <div class="card" style="box-shadow:0 2px 12px rgba(0,0,0,0.06);" data-aos="fade-up" data-aos-delay="60">
+          <details style="padding:1.5rem;">
+            <summary style="font-family:'Montserrat',sans-serif; font-weight:700; font-size:1rem; color:var(--primary); cursor:pointer; list-style:none; display:flex; justify-content:space-between; align-items:center;">
+              How do I donate to ADCUSA?
+              <i class="fas fa-plus" style="color:var(--secondary); flex-shrink:0; margin-left:1rem;"></i>
+            </summary>
+            <p style="color:var(--gray); font-size:0.92rem; line-height:1.8; margin-top:1rem;">You can donate online via PayPal on our <a href="get-involved.html#donate" style="color:var(--primary); font-weight:600;">Get Involved</a> page. Alternatively, you may mail a check payable to <strong>ADCUSA</strong> at P.O. Box 12616 RTP, Durham, NC 27709. All donations receive a tax-deductible receipt.</p>
+          </details>
+        </div>
+
+        <div class="card" style="box-shadow:0 2px 12px rgba(0,0,0,0.06);" data-aos="fade-up" data-aos-delay="120">
+          <details style="padding:1.5rem;">
+            <summary style="font-family:'Montserrat',sans-serif; font-weight:700; font-size:1rem; color:var(--primary); cursor:pointer; list-style:none; display:flex; justify-content:space-between; align-items:center;">
+              Do I need to be African to join or volunteer?
+              <i class="fas fa-plus" style="color:var(--secondary); flex-shrink:0; margin-left:1rem;"></i>
+            </summary>
+            <p style="color:var(--gray); font-size:0.92rem; line-height:1.8; margin-top:1rem;">Not at all. While ADCUSA focuses on the African diaspora community, we welcome allies, supporters, and volunteers of all backgrounds who share our vision of unity and development. Our programs benefit entire communities, not just one group.</p>
+          </details>
+        </div>
+
+        <div class="card" style="box-shadow:0 2px 12px rgba(0,0,0,0.06);" data-aos="fade-up" data-aos-delay="180">
+          <details style="padding:1.5rem;">
+            <summary style="font-family:'Montserrat',sans-serif; font-weight:700; font-size:1rem; color:var(--primary); cursor:pointer; list-style:none; display:flex; justify-content:space-between; align-items:center;">
+              How can my organization partner with ADCUSA?
+              <i class="fas fa-plus" style="color:var(--secondary); flex-shrink:0; margin-left:1rem;"></i>
+            </summary>
+            <p style="color:var(--gray); font-size:0.92rem; line-height:1.8; margin-top:1rem;">We partner with universities, hospitals, businesses, government agencies, and other nonprofits. Partnership can involve co-hosting events, providing in-kind support, sponsoring programs, or contributing professional expertise. Contact us via this page to start the conversation.</p>
+          </details>
+        </div>
+
+        <div class="card" style="box-shadow:0 2px 12px rgba(0,0,0,0.06);" data-aos="fade-up" data-aos-delay="240">
+          <details style="padding:1.5rem;">
+            <summary style="font-family:'Montserrat',sans-serif; font-weight:700; font-size:1rem; color:var(--primary); cursor:pointer; list-style:none; display:flex; justify-content:space-between; align-items:center;">
+              Where does ADCUSA operate?
+              <i class="fas fa-plus" style="color:var(--secondary); flex-shrink:0; margin-left:1rem;"></i>
+            </summary>
+            <p style="color:var(--gray); font-size:0.92rem; line-height:1.8; margin-top:1rem;">ADCUSA is based in Durham, North Carolina (Research Triangle area) and is active in 5+ U.S. states. We also have a broader vision for programs that support development across Africa, working to connect the diaspora with opportunities on both continents.</p>
+          </details>
+        </div>
+
+        <div class="card" style="box-shadow:0 2px 12px rgba(0,0,0,0.06);" data-aos="fade-up" data-aos-delay="300">
+          <details style="padding:1.5rem;">
+            <summary style="font-family:'Montserrat',sans-serif; font-weight:700; font-size:1rem; color:var(--primary); cursor:pointer; list-style:none; display:flex; justify-content:space-between; align-items:center;">
+              How can I get a receipt for my donation?
+              <i class="fas fa-plus" style="color:var(--secondary); flex-shrink:0; margin-left:1rem;"></i>
+            </summary>
+            <p style="color:var(--gray); font-size:0.92rem; line-height:1.8; margin-top:1rem;">Online donations via PayPal receive an automatic receipt. For mailed checks, contact us at <a href="mailto:drmwalalip@yahoo.com" style="color:var(--primary); font-weight:600;">drmwalalip@yahoo.com</a> and we will send you a formal donation receipt with our EIN (46-4204919) for tax purposes.</p>
+          </details>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── CTA ───────────────────────────────────── -->
+  <section class="cta-band section-pad" style="text-align:center;">
+    <div class="container-custom relative z-10" data-aos="fade-up">
+      <img src="../adcusalogo.png" alt="ADCUSA" style="height:80px; width:auto; margin:0 auto 1.5rem; display:block;" />
+      <h2 style="font-family:'Montserrat',sans-serif; font-size:clamp(1.6rem,3vw,2.5rem); font-weight:800; color:#fff; margin-bottom:1rem;">Ready to Be Part of the Movement?</h2>
+      <p style="color:rgba(255,255,255,0.80); max-width:500px; margin:0 auto 2.5rem; line-height:1.8;">
+        Together, we harness the potential of the African diaspora to create lasting change — in America and across Africa.
+      </p>
+      <div class="flex flex-wrap gap-4 justify-center">
+        <a href="get-involved.html#donate" class="btn-secondary">Donate Now</a>
+        <a href="get-involved.html#volunteer" class="btn-outline-white">Volunteer</a>
+        <a href="get-involved.html#membership" class="btn-outline-white">Become a Member</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FOOTER ─────────────────────────────────── -->
+  <footer>
+    <div class="container-custom">
+      <div class="grid md:grid-cols-4 gap-10 py-16 border-b footer-divider">
+        <div class="md:col-span-1">
+          <img src="../adcusalogo.png" alt="ADCUSA" style="height:180px; width:auto; margin-bottom:1.2rem;" />
+          <p style="color:rgba(255,255,255,0.65); font-size:0.88rem; line-height:1.8; margin-bottom:1.5rem;">Harnessing the potential of the African diaspora to support social and economic development in the U.S. and Africa.</p>
+          <div class="flex gap-3">
+            <a href="https://www.facebook.com/adcusa1/" target="_blank" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+        <div>
+          <h4 class="footer-heading">Quick Links</h4>
+          <a href="index.html" class="footer-link">Home</a>
+          <a href="about.html" class="footer-link">About ADCUSA</a>
+          <a href="programs.html" class="footer-link">Our Programs</a>
+          <a href="get-involved.html" class="footer-link">Get Involved</a>
+          <a href="contact.html" class="footer-link">Contact Us</a>
+        </div>
+        <div>
+          <h4 class="footer-heading">Programs</h4>
+          <a href="programs.html#cultural" class="footer-link">African Cultural Centers</a>
+          <a href="programs.html#professional" class="footer-link">Professional Networking</a>
+          <a href="programs.html#entrepreneur" class="footer-link">Entrepreneur Forums</a>
+          <a href="programs.html#youth" class="footer-link">Youth Leadership</a>
+          <a href="programs.html#advocacy" class="footer-link">Unity &amp; Advocacy</a>
+        </div>
+        <div>
+          <h4 class="footer-heading">Contact</h4>
+          <p class="footer-link"><i class="fas fa-map-marker-alt mr-2" style="color:var(--secondary);"></i>P.O. Box 12616 RTP<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Durham, NC 27709</p>
+          <a href="tel:+19199236188" class="footer-link"><i class="fas fa-phone mr-2" style="color:var(--secondary);"></i>(919) 923-6188</a>
+          <a href="mailto:drmwalalip@yahoo.com" class="footer-link"><i class="fas fa-envelope mr-2" style="color:var(--secondary);"></i>drmwalalip@yahoo.com</a>
+          <div style="margin-top:1.5rem;">
+            <h4 class="footer-heading">Newsletter</h4>
+            <form class="newsletter-form" style="display:flex; gap:0.5rem; margin-top:0.5rem;">
+              <input type="email" placeholder="Your email" class="form-input" style="background:rgba(255,255,255,0.08); border-color:rgba(255,255,255,0.15); color:#fff; font-size:0.85rem; padding:0.6rem 0.85rem;" />
+              <button type="submit" class="btn-secondary" style="padding:0.6rem 1rem; font-size:0.82rem; white-space:nowrap;">Subscribe</button>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="py-6 flex flex-wrap gap-4 items-center justify-between">
+        <p style="color:rgba(255,255,255,0.45); font-size:0.82rem;">&copy; 2025 African Diaspora Coalition of USA (ADCUSA). All rights reserved. EIN: 46-4204919</p>
+        <p style="color:rgba(255,255,255,0.35); font-size:0.78rem;"><a href="#" style="color:rgba(255,255,255,0.45); text-decoration:none;">Privacy Policy</a> &nbsp;·&nbsp; <a href="#" style="color:rgba(255,255,255,0.45); text-decoration:none;">Terms of Use</a> &nbsp;·&nbsp; adcusa.org</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

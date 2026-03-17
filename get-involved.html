@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Get Involved — ADCUSA | Donate, Volunteer, Become a Member</title>
+  <meta name="description" content="Join the African Diaspora Coalition of USA. Donate, volunteer, become a member, or partner with us to strengthen the African diaspora community." />
+  <link rel="icon" type="image/png" href="../adcusalogo.png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#1B4332', 'primary-dark': '#0F2419', 'primary-light': '#2D6A4F',
+            secondary: '#C8952A', 'secondary-light': '#E8B84B', cream: '#FEF9EF',
+          },
+          fontFamily: { heading: ['Montserrat', 'sans-serif'], body: ['Inter', 'sans-serif'] }
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="assets/css/custom.css" />
+</head>
+
+<body>
+
+  <!-- ── NAVIGATION ───────────────────────────── -->
+  <nav id="navbar" class="fixed top-0 left-0 right-0 z-50">
+    <div class="container-custom">
+      <div class="flex items-center justify-between py-3">
+        <a href="index.html" class="flex items-center gap-3 no-underline">
+          <img src="../adcusalogo.png" alt="ADCUSA Logo" class="drop-shadow-lg" style="height:5.95rem; width:auto;" />
+          <div class="org-name hidden md:block">
+            <div style="font-family:'Montserrat',sans-serif; font-weight:800; font-size:1.1rem; line-height:1.1; letter-spacing:0.04em; color:var(--primary);">ADCUSA</div>
+            <div style="font-family:'Inter',sans-serif; font-weight:400; font-size:0.72rem; letter-spacing:0.07em; opacity:0.75; color:var(--primary);">African Diaspora Coalition of USA</div>
+          </div>
+        </a>
+        <div class="hidden md:flex items-center gap-8">
+          <a href="index.html" class="nav-link">Home</a>
+          <a href="about.html" class="nav-link">About</a>
+          <a href="programs.html" class="nav-link">Programs</a>
+          <a href="get-involved.html" class="nav-link active">Get Involved</a>
+          <a href="contact.html" class="nav-link">Contact</a>
+          <a href="#donate" class="btn-secondary" style="padding:0.55rem 1.4rem; font-size:0.82rem;"><i class="fas fa-heart mr-1"></i> Donate</a>
+        </div>
+        <button id="menu-btn" class="md:hidden p-2 rounded focus:outline-none" aria-label="Menu">
+          <svg id="icon-open" class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/></svg>
+          <svg id="icon-close" class="w-7 h-7 hidden" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>
+        </button>
+      </div>
+      <div id="mobile-menu" class="hidden md:hidden pb-4">
+        <div class="flex flex-col gap-1 bg-primary rounded-lg p-4 mt-1">
+          <a href="index.html" class="text-white font-semibold py-2 px-3 rounded hover:bg-white/10 transition">Home</a>
+          <a href="about.html" class="text-white font-semibold py-2 px-3 rounded hover:bg-white/10 transition">About</a>
+          <a href="programs.html" class="text-white font-semibold py-2 px-3 rounded hover:bg-white/10 transition">Programs</a>
+          <a href="get-involved.html" class="text-white font-semibold py-2 px-3 rounded hover:bg-white/10 transition">Get Involved</a>
+          <a href="contact.html" class="text-white font-semibold py-2 px-3 rounded hover:bg-white/10 transition">Contact</a>
+          <a href="#donate" class="btn-secondary mt-2 text-center" style="padding:0.65rem;"><i class="fas fa-heart mr-1"></i> Donate Now</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ── PAGE HERO ─────────────────────────────── -->
+  <section class="page-hero" style="margin-top:0; padding-top:72px;">
+    <div class="page-hero-bg" style="background-image:url('../adimage/15911.jpg');"></div>
+    <div class="page-hero-overlay"></div>
+    <div class="container-custom page-hero-content w-full">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="index.html"><i class="fas fa-home mr-1"></i>Home</a>
+        <span>/</span><span style="color:#fff;">Get Involved</span>
+      </nav>
+      <h1 style="font-family:'Montserrat',sans-serif; font-size:clamp(2rem,5vw,3.5rem); font-weight:900; color:#fff; line-height:1.1;">Get <span style="color:var(--secondary);">Involved</span></h1>
+      <p style="color:rgba(255,255,255,0.80); font-size:1.05rem; margin-top:0.75rem; max-width:600px; line-height:1.75;">There are many ways to join the movement. Every contribution — big or small — makes a difference.</p>
+    </div>
+  </section>
+
+  <!-- ── WAYS TO HELP ───────────────────────────── -->
+  <section class="section-pad" style="background:var(--cream);">
+    <div class="container-custom">
+      <div class="text-center mb-14" data-aos="fade-up">
+        <span class="section-label">How You Can Help</span>
+        <h2 class="section-title">Four Ways to Support ADCUSA</h2>
+        <div class="section-divider center"></div>
+        <p style="color:var(--gray); max-width:580px; margin:0 auto; line-height:1.8;">
+          From financial contributions to hands-on volunteering, your support fuels the African diaspora's potential.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <a href="#donate" style="text-decoration:none;">
+          <div class="pillar-card text-center" data-aos="fade-up" data-aos-delay="0" style="cursor:pointer;">
+            <div style="width:72px; height:72px; background:rgba(200,149,42,0.12); border-radius:50%; display:flex; align-items:center; justify-content:center; margin:0 auto 1.25rem; font-size:1.8rem; color:var(--secondary);">
+              <i class="fas fa-hand-holding-heart"></i>
+            </div>
+            <h3 style="font-family:'Montserrat',sans-serif; font-size:1.1rem; font-weight:800; color:var(--primary); margin-bottom:0.5rem;">Donate</h3>
+            <p style="color:var(--gray); font-size:0.88rem; line-height:1.7;">Fund our programs and community initiatives with a one-time or recurring gift.</p>
+          </div>
+        </a>
+        <a href="#volunteer" style="text-decoration:none;">
+          <div class="pillar-card text-center" data-aos="fade-up" data-aos-delay="100" style="cursor:pointer;">
+            <div style="width:72px; height:72px; background:rgba(27,67,50,0.10); border-radius:50%; display:flex; align-items:center; justify-content:center; margin:0 auto 1.25rem; font-size:1.8rem; color:var(--primary);">
+              <i class="fas fa-people-carry"></i>
+            </div>
+            <h3 style="font-family:'Montserrat',sans-serif; font-size:1.1rem; font-weight:800; color:var(--primary); margin-bottom:0.5rem;">Volunteer</h3>
+            <p style="color:var(--gray); font-size:0.88rem; line-height:1.7;">Share your skills and time with an all-volunteer organization making real impact.</p>
+          </div>
+        </a>
+        <a href="#membership" style="text-decoration:none;">
+          <div class="pillar-card text-center" data-aos="fade-up" data-aos-delay="200" style="cursor:pointer;">
+            <div style="width:72px; height:72px; background:rgba(200,149,42,0.12); border-radius:50%; display:flex; align-items:center; justify-content:center; margin:0 auto 1.25rem; font-size:1.8rem; color:var(--secondary);">
+              <i class="fas fa-id-card-alt"></i>
+            </div>
+            <h3 style="font-family:'Montserrat',sans-serif; font-size:1.1rem; font-weight:800; color:var(--primary); margin-bottom:0.5rem;">Become a Member</h3>
+            <p style="color:var(--gray); font-size:0.88rem; line-height:1.7;">Join as an official ADCUSA member and access exclusive events, forums, and resources.</p>
+          </div>
+        </a>
+        <a href="#partner" style="text-decoration:none;">
+          <div class="pillar-card text-center" data-aos="fade-up" data-aos-delay="300" style="cursor:pointer;">
+            <div style="width:72px; height:72px; background:rgba(27,67,50,0.10); border-radius:50%; display:flex; align-items:center; justify-content:center; margin:0 auto 1.25rem; font-size:1.8rem; color:var(--primary);">
+              <i class="fas fa-handshake"></i>
+            </div>
+            <h3 style="font-family:'Montserrat',sans-serif; font-size:1.1rem; font-weight:800; color:var(--primary); margin-bottom:0.5rem;">Partner With Us</h3>
+            <p style="color:var(--gray); font-size:0.88rem; line-height:1.7;">Organizations, businesses, and institutions can partner with ADCUSA to multiply impact.</p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── DONATE ─────────────────────────────────── -->
+  <section id="donate" class="section-pad" style="background:#fff;">
+    <div class="container-custom">
+      <div class="grid md:grid-cols-2 gap-14 items-start">
+
+        <div data-aos="fade-right">
+          <span class="section-label">Make a Gift</span>
+          <h2 class="section-title">Donate to ADCUSA</h2>
+          <div class="section-divider"></div>
+          <p style="color:var(--gray); line-height:1.9; margin-bottom:1.5rem;">
+            As a 100% volunteer-driven <strong style="color:var(--primary);">501(c)(3) public charity</strong>, every dollar you contribute goes directly into programs that serve the African diaspora community. Your donation is <strong style="color:var(--primary);">fully tax-deductible</strong>.
+          </p>
+
+          <!-- Impact Breakdown -->
+          <div style="background:var(--cream); border-radius:10px; padding:2rem; margin-bottom:2rem;">
+            <h4 style="font-family:'Montserrat',sans-serif; font-weight:800; font-size:1rem; color:var(--primary); margin-bottom:1.25rem;">Your Gift at Work</h4>
+            <div class="flex flex-col gap-3">
+              <div style="display:flex; align-items:center; gap:1rem;">
+                <span style="background:var(--secondary); color:#fff; font-family:'Montserrat',sans-serif; font-weight:800; font-size:0.82rem; padding:0.35rem 0.75rem; border-radius:4px; white-space:nowrap;">$25</span>
+                <span style="color:var(--gray); font-size:0.9rem;">Supports youth leadership workshop materials for 5 students</span>
+              </div>
+              <div style="display:flex; align-items:center; gap:1rem;">
+                <span style="background:var(--secondary); color:#fff; font-family:'Montserrat',sans-serif; font-weight:800; font-size:0.82rem; padding:0.35rem 0.75rem; border-radius:4px; white-space:nowrap;">$50</span>
+                <span style="color:var(--gray); font-size:0.9rem;">Helps host a professional networking event for diaspora members</span>
+              </div>
+              <div style="display:flex; align-items:center; gap:1rem;">
+                <span style="background:var(--secondary); color:#fff; font-family:'Montserrat',sans-serif; font-weight:800; font-size:0.82rem; padding:0.35rem 0.75rem; border-radius:4px; white-space:nowrap;">$100</span>
+                <span style="color:var(--gray); font-size:0.9rem;">Funds a cultural center program event for the community</span>
+              </div>
+              <div style="display:flex; align-items:center; gap:1rem;">
+                <span style="background:var(--primary); color:#fff; font-family:'Montserrat',sans-serif; font-weight:800; font-size:0.82rem; padding:0.35rem 0.75rem; border-radius:4px; white-space:nowrap;">$500+</span>
+                <span style="color:var(--gray); font-size:0.9rem;">Sponsors a full forum or community development initiative</span>
+              </div>
+            </div>
+          </div>
+
+          <div style="background:rgba(27,67,50,0.05); border-radius:8px; padding:1.5rem; display:flex; gap:1rem; align-items:flex-start;">
+            <i class="fas fa-info-circle" style="color:var(--primary); font-size:1.25rem; flex-shrink:0; margin-top:2px;"></i>
+            <div>
+              <p style="color:var(--gray); font-size:0.88rem; line-height:1.75;">ADCUSA is a recognized IRS 501(c)(3) public charity. <strong style="color:var(--primary);">EIN: 46-4204919</strong>. All donations are tax-deductible to the fullest extent allowed by law. We are a 100% volunteer organization — zero overhead on staff salaries.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Donation Box -->
+        <div data-aos="fade-left">
+          <div style="background:var(--primary); border-radius:12px; overflow:hidden; box-shadow:0 24px 60px rgba(0,0,0,0.20);">
+            <div style="padding:2.5rem 2.5rem 0;">
+              <h3 style="font-family:'Montserrat',sans-serif; font-weight:800; font-size:1.4rem; color:#fff; margin-bottom:0.5rem;">Make a Donation</h3>
+              <p style="color:rgba(255,255,255,0.70); font-size:0.9rem; margin-bottom:2rem;">Choose an amount or enter your own</p>
+
+              <!-- Amount Buttons -->
+              <div class="grid grid-cols-3 gap-3 mb-4" id="amount-buttons">
+                <button onclick="selectAmount(this,'25')" class="amount-btn" style="background:rgba(255,255,255,0.12); color:#fff; border:1.5px solid rgba(255,255,255,0.25); border-radius:6px; padding:0.85rem; font-family:'Montserrat',sans-serif; font-weight:700; font-size:1rem; cursor:pointer; transition:all 0.2s;">$25</button>
+                <button onclick="selectAmount(this,'50')" class="amount-btn" style="background:rgba(255,255,255,0.12); color:#fff; border:1.5px solid rgba(255,255,255,0.25); border-radius:6px; padding:0.85rem; font-family:'Montserrat',sans-serif; font-weight:700; font-size:1rem; cursor:pointer; transition:all 0.2s;">$50</button>
+                <button onclick="selectAmount(this,'100')" class="amount-btn" style="background:var(--secondary); color:#fff; border:1.5px solid var(--secondary); border-radius:6px; padding:0.85rem; font-family:'Montserrat',sans-serif; font-weight:700; font-size:1rem; cursor:pointer; transition:all 0.2s;">$100</button>
+                <button onclick="selectAmount(this,'250')" class="amount-btn" style="background:rgba(255,255,255,0.12); color:#fff; border:1.5px solid rgba(255,255,255,0.25); border-radius:6px; padding:0.85rem; font-family:'Montserrat',sans-serif; font-weight:700; font-size:1rem; cursor:pointer; transition:all 0.2s;">$250</button>
+                <button onclick="selectAmount(this,'500')" class="amount-btn" style="background:rgba(255,255,255,0.12); color:#fff; border:1.5px solid rgba(255,255,255,0.25); border-radius:6px; padding:0.85rem; font-family:'Montserrat',sans-serif; font-weight:700; font-size:1rem; cursor:pointer; transition:all 0.2s;">$500</button>
+                <button onclick="selectAmount(this,'other')" class="amount-btn" style="background:rgba(255,255,255,0.12); color:#fff; border:1.5px solid rgba(255,255,255,0.25); border-radius:6px; padding:0.85rem; font-family:'Montserrat',sans-serif; font-weight:700; font-size:1rem; cursor:pointer; transition:all 0.2s;">Other</button>
+              </div>
+
+              <!-- Custom Amount -->
+              <div id="custom-amount-wrap" style="display:none; margin-bottom:1rem;">
+                <label style="color:rgba(255,255,255,0.75); font-size:0.82rem; font-family:'Montserrat',sans-serif; font-weight:600; display:block; margin-bottom:0.4rem;">Enter Amount ($)</label>
+                <input type="number" id="custom-amount" min="1" placeholder="e.g. 75" class="form-input" style="background:rgba(255,255,255,0.10); border-color:rgba(255,255,255,0.25); color:#fff; font-size:1.1rem; font-weight:700; font-family:'Montserrat',sans-serif;" />
+              </div>
+
+              <!-- Frequency -->
+              <div style="margin-bottom:1.5rem;">
+                <label style="color:rgba(255,255,255,0.75); font-size:0.82rem; font-family:'Montserrat',sans-serif; font-weight:600; display:block; margin-bottom:0.75rem;">Frequency</label>
+                <div style="display:flex; gap:0.75rem;">
+                  <label style="display:flex; align-items:center; gap:0.5rem; cursor:pointer; color:rgba(255,255,255,0.85); font-size:0.9rem;">
+                    <input type="radio" name="frequency" value="once" checked style="accent-color:var(--secondary);" /> One-time
+                  </label>
+                  <label style="display:flex; align-items:center; gap:0.5rem; cursor:pointer; color:rgba(255,255,255,0.85); font-size:0.9rem;">
+                    <input type="radio" name="frequency" value="monthly" style="accent-color:var(--secondary);" /> Monthly
+                  </label>
+                  <label style="display:flex; align-items:center; gap:0.5rem; cursor:pointer; color:rgba(255,255,255,0.85); font-size:0.9rem;">
+                    <input type="radio" name="frequency" value="annual" style="accent-color:var(--secondary);" /> Annual
+                  </label>
+                </div>
+              </div>
+            </div>
+
+            <div style="padding:0 2.5rem 2.5rem;">
+              <!-- PayPal donate button -->
+              <a href="https://www.paypal.com/donate/?hosted_button_id=ADCUSA" target="_blank"
+                style="display:block; background:var(--secondary); color:#fff; text-align:center; padding:1rem; border-radius:6px; font-family:'Montserrat',sans-serif; font-weight:800; font-size:1rem; letter-spacing:0.05em; text-decoration:none; transition:all 0.25s; margin-bottom:0.75rem;"
+                onmouseover="this.style.background='#9A6F1A'" onmouseout="this.style.background='var(--secondary)'">
+                <i class="fas fa-heart mr-2"></i> Donate Now via PayPal
+              </a>
+              <p style="color:rgba(255,255,255,0.45); font-size:0.78rem; text-align:center;">
+                <i class="fas fa-lock mr-1"></i> Secure payment via PayPal &nbsp;·&nbsp; Tax-deductible &nbsp;·&nbsp; EIN: 46-4204919
+              </p>
+
+              <!-- Mailing check info -->
+              <div style="border-top:1px solid rgba(255,255,255,0.12); padding-top:1.5rem; margin-top:1.5rem;">
+                <p style="color:rgba(255,255,255,0.60); font-size:0.82rem; text-align:center; line-height:1.75;">
+                  Prefer to mail a check? Make checks payable to <strong style="color:#fff;">ADCUSA</strong><br/>
+                  P.O. Box 12616 RTP, Durham, NC 27709
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── VOLUNTEER ─────────────────────────────── -->
+  <section id="volunteer" class="section-pad" style="background:var(--cream);">
+    <div class="container-custom">
+      <div class="grid md:grid-cols-2 gap-14 items-start">
+
+        <div data-aos="fade-right">
+          <span class="section-label">Give Your Time</span>
+          <h2 class="section-title">Volunteer with ADCUSA</h2>
+          <div class="section-divider"></div>
+          <p style="color:var(--gray); line-height:1.9; margin-bottom:1.5rem;">
+            ADCUSA is 100% volunteer-powered. Our incredible team of dedicated volunteers drives every forum, cultural event, and advocacy campaign. Whether you have hours to spare or skills to share, we have a place for you.
+          </p>
+
+          <div class="flex flex-col gap-4 mb-6">
+            <div style="display:flex; gap:1rem; align-items:flex-start; background:#fff; padding:1.25rem; border-radius:8px; box-shadow:0 2px 12px rgba(0,0,0,0.06);">
+              <div style="width:44px; height:44px; border-radius:50%; background:rgba(27,67,50,0.10); display:flex; align-items:center; justify-content:center; flex-shrink:0; color:var(--primary); font-size:1.1rem;">
+                <i class="fas fa-calendar-check"></i>
+              </div>
+              <div>
+                <h4 style="font-family:'Montserrat',sans-serif; font-weight:700; font-size:0.95rem; color:var(--primary); margin-bottom:0.3rem;">Event Coordination</h4>
+                <p style="color:var(--gray); font-size:0.88rem; line-height:1.65;">Help plan, organize, and run community forums, cultural events, and professional gatherings.</p>
+              </div>
+            </div>
+            <div style="display:flex; gap:1rem; align-items:flex-start; background:#fff; padding:1.25rem; border-radius:8px; box-shadow:0 2px 12px rgba(0,0,0,0.06);">
+              <div style="width:44px; height:44px; border-radius:50%; background:rgba(27,67,50,0.10); display:flex; align-items:center; justify-content:center; flex-shrink:0; color:var(--primary); font-size:1.1rem;">
+                <i class="fas fa-bullhorn"></i>
+              </div>
+              <div>
+                <h4 style="font-family:'Montserrat',sans-serif; font-weight:700; font-size:0.95rem; color:var(--primary); margin-bottom:0.3rem;">Communications &amp; Social Media</h4>
+                <p style="color:var(--gray); font-size:0.88rem; line-height:1.65;">Create content, manage social media, write newsletters, and spread ADCUSA's message.</p>
+              </div>
+            </div>
+            <div style="display:flex; gap:1rem; align-items:flex-start; background:#fff; padding:1.25rem; border-radius:8px; box-shadow:0 2px 12px rgba(0,0,0,0.06);">
+              <div style="width:44px; height:44px; border-radius:50%; background:rgba(27,67,50,0.10); display:flex; align-items:center; justify-content:center; flex-shrink:0; color:var(--primary); font-size:1.1rem;">
+                <i class="fas fa-chalkboard-teacher"></i>
+              </div>
+              <div>
+                <h4 style="font-family:'Montserrat',sans-serif; font-weight:700; font-size:0.95rem; color:var(--primary); margin-bottom:0.3rem;">Youth Mentorship</h4>
+                <p style="color:var(--gray); font-size:0.88rem; line-height:1.65;">Mentor young people in our youth leadership programs — share your professional journey and wisdom.</p>
+              </div>
+            </div>
+            <div style="display:flex; gap:1rem; align-items:flex-start; background:#fff; padding:1.25rem; border-radius:8px; box-shadow:0 2px 12px rgba(0,0,0,0.06);">
+              <div style="width:44px; height:44px; border-radius:50%; background:rgba(27,67,50,0.10); display:flex; align-items:center; justify-content:center; flex-shrink:0; color:var(--primary); font-size:1.1rem;">
+                <i class="fas fa-laptop-code"></i>
+              </div>
+              <div>
+                <h4 style="font-family:'Montserrat',sans-serif; font-weight:700; font-size:0.95rem; color:var(--primary); margin-bottom:0.3rem;">Professional Skills</h4>
+                <p style="color:var(--gray); font-size:0.88rem; line-height:1.65;">Contribute expertise in law, accounting, healthcare, tech, marketing, or other fields to advance our mission.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Volunteer Form -->
+        <div data-aos="fade-left">
+          <div style="background:#fff; border-radius:12px; padding:2.5rem; box-shadow:0 12px 40px rgba(0,0,0,0.10);">
+            <h3 style="font-family:'Montserrat',sans-serif; font-weight:800; font-size:1.3rem; color:var(--primary); margin-bottom:0.5rem;">Volunteer Application</h3>
+            <p style="color:var(--gray); font-size:0.88rem; margin-bottom:2rem;">Fill out this form and we'll be in touch about volunteer opportunities.</p>
+            <form id="volunteer-form" class="flex flex-col gap-4">
+              <div class="grid grid-cols-2 gap-4">
+                <div>
+                  <label class="form-label">First Name *</label>
+                  <input type="text" class="form-input" placeholder="First name" required />
+                </div>
+                <div>
+                  <label class="form-label">Last Name *</label>
+                  <input type="text" class="form-input" placeholder="Last name" required />
+                </div>
+              </div>
+              <div>
+                <label class="form-label">Email Address *</label>
+                <input type="email" class="form-input" placeholder="your@email.com" required />
+              </div>
+              <div>
+                <label class="form-label">Phone Number</label>
+                <input type="tel" class="form-input" placeholder="(919) 000-0000" />
+              </div>
+              <div>
+                <label class="form-label">City / State *</label>
+                <input type="text" class="form-input" placeholder="Durham, NC" required />
+              </div>
+              <div>
+                <label class="form-label">Area of Interest *</label>
+                <select class="form-input" required>
+                  <option value="">Select an area...</option>
+                  <option>Event Coordination</option>
+                  <option>Communications &amp; Social Media</option>
+                  <option>Youth Mentorship</option>
+                  <option>Professional Skills / Consulting</option>
+                  <option>Fundraising &amp; Development</option>
+                  <option>Board &amp; Leadership</option>
+                  <option>Other</option>
+                </select>
+              </div>
+              <div>
+                <label class="form-label">Tell us about yourself</label>
+                <textarea class="form-input" rows="3" placeholder="Brief background and why you want to volunteer with ADCUSA..."></textarea>
+              </div>
+              <button type="submit" class="btn-primary" style="font-size:0.92rem; text-align:center;">Submit Application <i class="fas fa-arrow-right ml-2"></i></button>
+            </form>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── MEMBERSHIP ─────────────────────────────── -->
+  <section id="membership" class="section-pad" style="background:#fff;">
+    <div class="container-custom">
+      <div class="text-center mb-14" data-aos="fade-up">
+        <span class="section-label">Join the Family</span>
+        <h2 class="section-title">ADCUSA Membership</h2>
+        <div class="section-divider center"></div>
+        <p style="color:var(--gray); max-width:580px; margin:0 auto; line-height:1.8;">
+          Become an official member of the African Diaspora Coalition of USA and be part of a powerful network driving change across communities.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+
+        <!-- Community Member -->
+        <div data-aos="fade-up" data-aos-delay="0">
+          <div style="border:2px solid #e5e7eb; border-radius:12px; padding:2.5rem; text-align:center; transition:all 0.3s ease;" onmouseover="this.style.borderColor='var(--secondary)'; this.style.boxShadow='0 12px 40px rgba(0,0,0,0.10)';" onmouseout="this.style.borderColor='#e5e7eb'; this.style.boxShadow='none';">
+            <div style="background:rgba(200,149,42,0.10); width:60px; height:60px; border-radius:50%; display:flex; align-items:center; justify-content:center; margin:0 auto 1.25rem; font-size:1.5rem; color:var(--secondary);">
+              <i class="fas fa-user"></i>
+            </div>
+            <h3 style="font-family:'Montserrat',sans-serif; font-weight:800; font-size:1.1rem; color:var(--primary); margin-bottom:0.4rem;">Community Member</h3>
+            <div style="font-family:'Montserrat',sans-serif; font-size:2rem; font-weight:900; color:var(--secondary); margin:0.75rem 0;">Free</div>
+            <p style="color:var(--gray); font-size:0.85rem; line-height:1.7; margin-bottom:1.5rem;">Stay connected, receive newsletters, and attend open community events.</p>
+            <ul style="list-style:none; text-align:left; margin-bottom:2rem;">
+              <li style="color:var(--gray); font-size:0.88rem; padding:0.4rem 0; display:flex; gap:0.75rem;"><i class="fas fa-check" style="color:var(--secondary); margin-top:3px; flex-shrink:0;"></i> Newsletter access</li>
+              <li style="color:var(--gray); font-size:0.88rem; padding:0.4rem 0; display:flex; gap:0.75rem;"><i class="fas fa-check" style="color:var(--secondary); margin-top:3px; flex-shrink:0;"></i> Open event invitations</li>
+              <li style="color:var(--gray); font-size:0.88rem; padding:0.4rem 0; display:flex; gap:0.75rem;"><i class="fas fa-check" style="color:var(--secondary); margin-top:3px; flex-shrink:0;"></i> Community directory</li>
+            </ul>
+            <a href="contact.html" class="btn-outline-gold" style="font-size:0.85rem; display:block; text-align:center;">Join Free</a>
+          </div>
+        </div>
+
+        <!-- Active Member - Featured -->
+        <div data-aos="fade-up" data-aos-delay="120">
+          <div style="border:2px solid var(--secondary); border-radius:12px; padding:2.5rem; text-align:center; box-shadow:0 20px 50px rgba(200,149,42,0.20); position:relative; background:#fff;">
+            <div style="position:absolute; top:-14px; left:50%; transform:translateX(-50%); background:var(--secondary); color:#fff; font-family:'Montserrat',sans-serif; font-size:0.75rem; font-weight:800; letter-spacing:0.08em; text-transform:uppercase; padding:0.35rem 1.2rem; border-radius:20px;">Most Popular</div>
+            <div style="background:var(--secondary); width:60px; height:60px; border-radius:50%; display:flex; align-items:center; justify-content:center; margin:0 auto 1.25rem; font-size:1.5rem; color:#fff;">
+              <i class="fas fa-star"></i>
+            </div>
+            <h3 style="font-family:'Montserrat',sans-serif; font-weight:800; font-size:1.1rem; color:var(--primary); margin-bottom:0.4rem;">Active Member</h3>
+            <div style="font-family:'Montserrat',sans-serif; font-size:2rem; font-weight:900; color:var(--secondary); margin:0.75rem 0;">$50<span style="font-size:0.9rem; font-weight:500; color:var(--gray);">/yr</span></div>
+            <p style="color:var(--gray); font-size:0.85rem; line-height:1.7; margin-bottom:1.5rem;">Full membership with access to all events, forums, and networking opportunities.</p>
+            <ul style="list-style:none; text-align:left; margin-bottom:2rem;">
+              <li style="color:var(--gray); font-size:0.88rem; padding:0.4rem 0; display:flex; gap:0.75rem;"><i class="fas fa-check" style="color:var(--secondary); margin-top:3px; flex-shrink:0;"></i> All community member benefits</li>
+              <li style="color:var(--gray); font-size:0.88rem; padding:0.4rem 0; display:flex; gap:0.75rem;"><i class="fas fa-check" style="color:var(--secondary); margin-top:3px; flex-shrink:0;"></i> Professional forum access</li>
+              <li style="color:var(--gray); font-size:0.88rem; padding:0.4rem 0; display:flex; gap:0.75rem;"><i class="fas fa-check" style="color:var(--secondary); margin-top:3px; flex-shrink:0;"></i> Entrepreneur forum invites</li>
+              <li style="color:var(--gray); font-size:0.88rem; padding:0.4rem 0; display:flex; gap:0.75rem;"><i class="fas fa-check" style="color:var(--secondary); margin-top:3px; flex-shrink:0;"></i> Member certificate</li>
+              <li style="color:var(--gray); font-size:0.88rem; padding:0.4rem 0; display:flex; gap:0.75rem;"><i class="fas fa-check" style="color:var(--secondary); margin-top:3px; flex-shrink:0;"></i> Voting rights</li>
+            </ul>
+            <a href="contact.html" class="btn-secondary" style="font-size:0.85rem; display:block; text-align:center;">Become a Member</a>
+          </div>
+        </div>
+
+        <!-- Founding/Corporate -->
+        <div data-aos="fade-up" data-aos-delay="240">
+          <div style="border:2px solid var(--primary); border-radius:12px; padding:2.5rem; text-align:center; background:var(--primary); position:relative; transition:all 0.3s ease;" onmouseover="this.style.boxShadow='0 12px 40px rgba(27,67,50,0.25)';" onmouseout="this.style.boxShadow='none';">
+            <div style="background:rgba(255,255,255,0.15); width:60px; height:60px; border-radius:50%; display:flex; align-items:center; justify-content:center; margin:0 auto 1.25rem; font-size:1.5rem; color:var(--secondary);">
+              <i class="fas fa-crown"></i>
+            </div>
+            <h3 style="font-family:'Montserrat',sans-serif; font-weight:800; font-size:1.1rem; color:#fff; margin-bottom:0.4rem;">Founding / Corporate</h3>
+            <div style="font-family:'Montserrat',sans-serif; font-size:2rem; font-weight:900; color:var(--secondary); margin:0.75rem 0;">$500+<span style="font-size:0.9rem; font-weight:500; color:rgba(255,255,255,0.60);">/yr</span></div>
+            <p style="color:rgba(255,255,255,0.75); font-size:0.85rem; line-height:1.7; margin-bottom:1.5rem;">Premium membership for businesses, institutions, and major supporters.</p>
+            <ul style="list-style:none; text-align:left; margin-bottom:2rem;">
+              <li style="color:rgba(255,255,255,0.80); font-size:0.88rem; padding:0.4rem 0; display:flex; gap:0.75rem;"><i class="fas fa-check" style="color:var(--secondary); margin-top:3px; flex-shrink:0;"></i> All active member benefits</li>
+              <li style="color:rgba(255,255,255,0.80); font-size:0.88rem; padding:0.4rem 0; display:flex; gap:0.75rem;"><i class="fas fa-check" style="color:var(--secondary); margin-top:3px; flex-shrink:0;"></i> Logo on all materials</li>
+              <li style="color:rgba(255,255,255,0.80); font-size:0.88rem; padding:0.4rem 0; display:flex; gap:0.75rem;"><i class="fas fa-check" style="color:var(--secondary); margin-top:3px; flex-shrink:0;"></i> Speaking opportunities</li>
+              <li style="color:rgba(255,255,255,0.80); font-size:0.88rem; padding:0.4rem 0; display:flex; gap:0.75rem;"><i class="fas fa-check" style="color:var(--secondary); margin-top:3px; flex-shrink:0;"></i> Board advisory role</li>
+            </ul>
+            <a href="contact.html" class="btn-outline-white" style="font-size:0.85rem; display:block; text-align:center;">Contact Us</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── PARTNER ─────────────────────────────────── -->
+  <section id="partner" class="section-pad" style="background:var(--cream);">
+    <div class="container-custom">
+      <div class="grid md:grid-cols-2 gap-14 items-center">
+        <div data-aos="fade-right">
+          <span class="section-label">Organizational Partnership</span>
+          <h2 class="section-title">Partner With ADCUSA</h2>
+          <div class="section-divider"></div>
+          <p style="color:var(--gray); line-height:1.9; margin-bottom:1.5rem;">
+            We welcome partnerships with <strong style="color:var(--primary);">universities, hospitals, businesses, government agencies, and other nonprofits</strong> that share our commitment to the African diaspora community.
+          </p>
+          <p style="color:var(--gray); line-height:1.9; margin-bottom:2rem;">
+            Partnership opportunities include co-hosting forums, providing in-kind support, sponsoring programs, or contributing expertise and resources to advance our shared mission.
+          </p>
+          <div class="flex flex-col gap-3 mb-2.5">
+            <div style="display:flex; gap:0.75rem; align-items:flex-start;">
+              <i class="fas fa-check-circle" style="color:var(--secondary); margin-top:2px; flex-shrink:0;"></i>
+              <span style="color:var(--gray);">Co-branding and event co-hosting</span>
+            </div>
+            <div style="display:flex; gap:0.75rem; align-items:flex-start;">
+              <i class="fas fa-check-circle" style="color:var(--secondary); margin-top:2px; flex-shrink:0;"></i>
+              <span style="color:var(--gray);">Program sponsorship opportunities</span>
+            </div>
+            <div style="display:flex; gap:0.75rem; align-items:flex-start;">
+              <i class="fas fa-check-circle" style="color:var(--secondary); margin-top:2px; flex-shrink:0;"></i>
+              <span style="color:var(--gray);">In-kind support (venues, services, equipment)</span>
+            </div>
+            <div style="display:flex; gap:0.75rem; align-items:flex-start;">
+              <i class="fas fa-check-circle" style="color:var(--secondary); margin-top:2px; flex-shrink:0;"></i>
+              <span style="color:var(--gray);">Grant collaboration and foundation partnerships</span>
+            </div>
+          </div>
+          <a href="contact.html" class="btn-primary" style="margin-top:1.5rem; font-size:0.9rem;">Discuss a Partnership <i class="fas fa-arrow-right ml-2"></i></a>
+        </div>
+
+        <div data-aos="fade-left">
+          <div style="border-radius:12px; overflow:hidden; box-shadow:0 20px 50px rgba(0,0,0,0.14);">
+            <img src="../adimage/118348.jpg"
+              alt="Partnership" style="width:100%; height:400px; object-fit:cover; display:block;"
+              onerror="this.style.background='var(--primary)'; this.style.height='400px'; this.removeAttribute('src');" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FOOTER ─────────────────────────────────── -->
+  <footer>
+    <div class="container-custom">
+      <div class="grid md:grid-cols-4 gap-10 py-16 border-b footer-divider">
+        <div class="md:col-span-1">
+          <img src="../adcusalogo.png" alt="ADCUSA" style="height:180px; width:auto; margin-bottom:1.2rem;" />
+          <p style="color:rgba(255,255,255,0.65); font-size:0.88rem; line-height:1.8; margin-bottom:1.5rem;">Harnessing the potential of the African diaspora to support social and economic development in the U.S. and Africa.</p>
+          <div class="flex gap-3">
+            <a href="https://www.facebook.com/adcusa1/" target="_blank" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+        <div>
+          <h4 class="footer-heading">Quick Links</h4>
+          <a href="index.html" class="footer-link">Home</a>
+          <a href="about.html" class="footer-link">About ADCUSA</a>
+          <a href="programs.html" class="footer-link">Our Programs</a>
+          <a href="get-involved.html" class="footer-link">Get Involved</a>
+          <a href="contact.html" class="footer-link">Contact Us</a>
+        </div>
+        <div>
+          <h4 class="footer-heading">Get Involved</h4>
+          <a href="#donate" class="footer-link">Donate</a>
+          <a href="#volunteer" class="footer-link">Volunteer</a>
+          <a href="#membership" class="footer-link">Become a Member</a>
+          <a href="#partner" class="footer-link">Partner with Us</a>
+        </div>
+        <div>
+          <h4 class="footer-heading">Contact</h4>
+          <p class="footer-link"><i class="fas fa-map-marker-alt mr-2" style="color:var(--secondary);"></i>P.O. Box 12616 RTP<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Durham, NC 27709</p>
+          <a href="tel:+19199236188" class="footer-link"><i class="fas fa-phone mr-2" style="color:var(--secondary);"></i>(919) 923-6188</a>
+          <a href="mailto:drmwalalip@yahoo.com" class="footer-link"><i class="fas fa-envelope mr-2" style="color:var(--secondary);"></i>drmwalalip@yahoo.com</a>
+          <div style="margin-top:1.5rem;">
+            <h4 class="footer-heading">Newsletter</h4>
+            <form class="newsletter-form" style="display:flex; gap:0.5rem; margin-top:0.5rem;">
+              <input type="email" placeholder="Your email" class="form-input" style="background:rgba(255,255,255,0.08); border-color:rgba(255,255,255,0.15); color:#fff; font-size:0.85rem; padding:0.6rem 0.85rem;" />
+              <button type="submit" class="btn-secondary" style="padding:0.6rem 1rem; font-size:0.82rem; white-space:nowrap;">Subscribe</button>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="py-6 flex flex-wrap gap-4 items-center justify-between">
+        <p style="color:rgba(255,255,255,0.45); font-size:0.82rem;">&copy; 2025 African Diaspora Coalition of USA (ADCUSA). All rights reserved. EIN: 46-4204919</p>
+        <p style="color:rgba(255,255,255,0.35); font-size:0.78rem;"><a href="#" style="color:rgba(255,255,255,0.45); text-decoration:none;">Privacy Policy</a> &nbsp;·&nbsp; <a href="#" style="color:rgba(255,255,255,0.45); text-decoration:none;">Terms of Use</a> &nbsp;·&nbsp; adcusa.org</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script>
+    function selectAmount(btn, amount) {
+      document.querySelectorAll('.amount-btn').forEach(b => {
+        b.style.background = 'rgba(255,255,255,0.12)';
+        b.style.borderColor = 'rgba(255,255,255,0.25)';
+      });
+      btn.style.background = 'var(--secondary)';
+      btn.style.borderColor = 'var(--secondary)';
+      const customWrap = document.getElementById('custom-amount-wrap');
+      if (amount === 'other') customWrap.style.display = 'block';
+      else customWrap.style.display = 'none';
+    }
+    // Pre-select $100
+    document.addEventListener('DOMContentLoaded', function() {
+      const btns = document.querySelectorAll('.amount-btn');
+      if (btns[2]) { btns[2].style.background = 'var(--secondary)'; btns[2].style.borderColor = 'var(--secondary)'; }
+    });
+  </script>
+</body>
+</html>
