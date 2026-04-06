@@ -158,16 +158,23 @@
 
         <!-- Video Player -->
         <div data-aos="fade-right">
-          <div style="position:relative; border-radius:12px; overflow:hidden; box-shadow:0 24px 60px rgba(0,0,0,0.22);">
+          <div id="video-wrap" style="position:relative; border-radius:12px; overflow:hidden; box-shadow:0 24px 60px rgba(0,0,0,0.22); aspect-ratio:4/3; cursor:pointer;" onclick="var v=this.querySelector('video'),b=this.querySelector('.play-btn');if(v.paused){v.play();b.style.opacity='0';b.style.pointerEvents='none';}else{v.pause();b.style.opacity='1';b.style.pointerEvents='auto';}">
             <video
-              controls
               preload="metadata"
-              poster=""
-              style="width:100%; display:block; border-radius:12px; background:#000;"
+              style="width:100%; height:100%; object-fit:cover; object-position:center 60%; display:block; background:#000;"
+              onplay="this.parentElement.querySelector('.play-btn').style.opacity='0'"
+              onpause="this.parentElement.querySelector('.play-btn').style.opacity='1'"
+              onended="this.parentElement.querySelector('.play-btn').style.opacity='1'"
             >
               <source src="assets/mwalali.mp4" type="video/mp4" />
               Your browser does not support the video tag.
             </video>
+            <!-- Big Play Button Overlay -->
+            <div class="play-btn" style="position:absolute; inset:0; display:flex; align-items:center; justify-content:center; transition:opacity 0.3s ease; pointer-events:none;">
+              <div style="width:80px; height:80px; border-radius:50%; background:rgba(200,149,42,0.9); display:flex; align-items:center; justify-content:center; box-shadow:0 8px 30px rgba(0,0,0,0.35); backdrop-filter:blur(4px);">
+                <i class="fas fa-play" style="color:#fff; font-size:2rem; margin-left:5px;"></i>
+              </div>
+            </div>
           </div>
         </div>
 
